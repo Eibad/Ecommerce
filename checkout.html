@@ -1,11 +1,11 @@
 ﻿<!doctype html>
 <html class="no-js" lang="en">
 
-<!-- Mirrored from richman.keepgoods.com/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 13 Oct 2020 17:30:52 GMT -->
+
 <head>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Checkout || Richman</title>
+<title>Checkout</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="cdn-cgi/apps/head/VOTpVwma55eOauTrYZhS1mPXv0A.js"></script><link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
@@ -29,6 +29,11 @@
 <link rel="stylesheet" href="css/responsive.css">
 
 <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+<script src="js/settings.js"></script>
+<script src="js/checkout.js"></script>
+
+
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -88,19 +93,18 @@
 <div class="row">
 <div class="col-md-2 col-sm-4 col-xs-6">
 <div class="logo">
-<a href="index-2.html"><img src="img/logo.png" alt="" /></a>
+<a href="index.html"><img id="logo" src="img/logo.png" alt="" /></a>
 </div>
 </div>
 <div class="col-md-8 hidden-xs hidden-sm">
 <div class="main-menu">
 <nav>
 <ul>
-<li><a href="index-2.html">home</a>
+<li><a href="index.html">home</a>
 <ul>
-<li><a href="index-2.html">home version 1</a></li>
-<li><a href="index-3.html">home version 2</a></li>
-<li><a href="index-4.html">home version 3</a></li>
-<li><a href="index-5.html">home version box</a></li>
+<li><a href="index.html">home version 1</a></li>
+<li><a href="index-2.html">home version 2</a></li>
+
 </ul>
 </li>
 <li><a href="about.html">about</a></li>
@@ -167,51 +171,8 @@
 <span>3</span>
 </a>
 </div>
-<ul>
-<li>
-<div class="cart-img">
-<a href="#"><img alt="" src="img/cart/1.jpg"></a>
-</div>
-<div class="cart-info">
-<h4><a href="#">Vestibulum suscipit</a></h4>
-<span>£165.00 <span>x 1</span></span>
-</div>
-<div class="del-icon">
-<i class="fa fa-times-circle"></i>
-</div>
-</li>
-<li>
-<div class="cart-img">
-<a href="#"><img alt="" src="img/cart/1.jpg"></a>
-</div>
-<div class="cart-info">
-<h4><a href="#">Vestibulum suscipit</a></h4>
-<span>£165.00 <span>x 1</span></span>
-</div>
-<div class="del-icon">
-<i class="fa fa-times-circle"></i>
-</div>
-</li>
-<li>
-<div class="cart-img">
-<a href="#"><img alt="" src="img/cart/1.jpg"></a>
-</div>
-<div class="cart-info">
-<h4><a href="#">Vestibulum suscipit</a></h4>
-<span>£165.00 <span>x 1</span></span>
-</div>
-<div class="del-icon">
-<i class="fa fa-times-circle"></i>
-</div>
-</li>
-<li class="cart-border">
-<div class="subtotal-text">Subtotal: </div>
-<div class="subtotal-price">£300.00</div>
-</li>
-<li>
-<a class="cart-button" href="checkout.html">view cart</a>
-<a class="checkout" href="checkout.html">checkout</a>
-</li>
+<ul id="headerCart">   
+
 </ul>
 </div>
 <div class="header-search">
@@ -247,9 +208,9 @@
 <div class="mobile-menu">
 <nav id="dropdown">
 <ul>
-<li><a href="index-2.html">Home</a>
+<li><a href="index.html">Home</a>
 <ul>
-<li><a href="index-2.html">home version 1</a></li>
+<li><a href="index.html">home version 1</a></li>
 <li><a href="index-3.html">home version 2</a></li>
 <li><a href="index-4.html">home version 3</a></li>
 <li><a href="index-5.html">home version box</a></li>
@@ -333,7 +294,7 @@
 <div class="col-md-12">
 <div class="breadcrumb-list">
 <ul>
-<li><a href="index-2.html">HOME</a></li>
+<li><a href="index.html">HOME</a></li>
 <li><a href="shop.html">Shop</a></li>
 <li><a href="cart.html">Shopping Cart</a></li>
  <li><span>Checkout</span></li>
@@ -410,179 +371,52 @@ Remember me
 <div class="checkbox-form">
 <h3>Billing Details</h3>
 <div class="row">
-<div class="col-md-12">
-<div class="country-select">
-<label>Country <span class="required">*</span></label>
-<select>
-<option value="volvo">bangladesh</option>
-<option value="saab">Algeria</option>
-<option value="mercedes">Afghanistan</option>
-<option value="audi">Ghana</option>
-<option value="audi2">Albania</option>
-<option value="audi3">Bahrain</option>
-<option value="audi4">Colombia</option>
-<option value="audi5">Dominican Republic</option>
-</select>
-</div>
-</div>
 <div class="col-md-6">
 <div class="checkout-form-list">
 <label>First Name <span class="required">*</span></label>
-<input type="text" placeholder="" />
+<input type="text" placeholder="First Name" id="fname" />
 </div>
 </div>
 <div class="col-md-6">
 <div class="checkout-form-list">
 <label>Last Name <span class="required">*</span></label>
-<input type="text" placeholder="" />
-</div>
-</div>
-<div class="col-md-12">
-<div class="checkout-form-list">
-<label>Company Name</label>
-<input type="text" placeholder="" />
+<input type="text" placeholder="Last Name" id="lname" />
 </div>
 </div>
 <div class="col-md-12">
 <div class="checkout-form-list">
 <label>Address <span class="required">*</span></label>
-<input type="text" placeholder="Street address" />
-</div>
-</div>
-<div class="col-md-12">
-<div class="checkout-form-list">
-<input type="text" placeholder="Apartment, suite, unit etc. (optional)" />
+<input type="text" placeholder="Address" id="address" />
 </div>
 </div>
 <div class="col-md-12">
 <div class="checkout-form-list">
 <label>Town / City <span class="required">*</span></label>
-<input type="text" placeholder="Town / City" />
+<input type="text" placeholder="Town / City" id="city" />
 </div>
 </div>
 <div class="col-md-6">
 <div class="checkout-form-list">
-<label>State / County <span class="required">*</span></label>
-<input type="text" placeholder="" />
-</div>
-</div>
-<div class="col-md-6">
-<div class="checkout-form-list">
-<label>Postcode / Zip <span class="required">*</span></label>
-<input type="text" placeholder="Postcode / Zip" />
-</div>
-</div>
-<div class="col-md-6">
-<div class="checkout-form-list">
-<label>Email Address <span class="required">*</span></label>
-<input type="email" placeholder="" />
-</div>
-</div>
-<div class="col-md-6">
-<div class="checkout-form-list">
-<label>Phone <span class="required">*</span></label>
-<input type="text" placeholder="Postcode / Zip" />
-</div>
-</div>
-<div class="col-md-12">
-<div class="checkout-form-list create-acc">
-<input id="cbox" type="checkbox" />
-<label>Create an account?</label>
-</div>
-<div id="cbox_info" class="checkout-form-list create-account">
-<p>Create an account by entering the information below. If you are a returning customer please login at the top of the page.</p>
-<label>Account password <span class="required">*</span></label>
-<input type="password" placeholder="password" />
-</div>
-</div>
-</div>
-<div class="different-address">
-<div class="ship-different-title">
-<h3>
-<label>Ship to a different address?</label>
-<input id="ship-box" type="checkbox" />
-</h3>
-</div>
-<div id="ship-box-info" class="row">
-<div class="col-md-12">
-<div class="country-select">
-<label>Country <span class="required">*</span></label>
-<select>
-<option value="volvo">bangladesh</option>
-<option value="saab">Algeria</option>
-<option value="mercedes">Afghanistan</option>
-<option value="audi">Ghana</option>
-<option value="audi2">Albania</option>
-<option value="audi3">Bahrain</option>
-<option value="audi4">Colombia</option>
-<option value="audi5">Dominican Republic</option>
-</select>
-</div>
-</div>
-<div class="col-md-6">
-<div class="checkout-form-list">
-<label>First Name <span class="required">*</span></label>
-<input type="text" placeholder="" />
-</div>
-</div>
-<div class="col-md-6">
-<div class="checkout-form-list">
-<label>Last Name <span class="required">*</span></label>
-<input type="text" placeholder="" />
-</div>
-</div>
-<div class="col-md-12">
-<div class="checkout-form-list">
-<label>Company Name</label>
-<input type="text" placeholder="" />
-</div>
-</div>
-<div class="col-md-12">
-<div class="checkout-form-list">
-<label>Address <span class="required">*</span></label>
-<input type="text" placeholder="Street address" />
-</div>
-</div>
-<div class="col-md-12">
-<div class="checkout-form-list">
-<input type="text" placeholder="Apartment, suite, unit etc. (optional)" />
-</div>
-</div>
-<div class="col-md-12">
-<div class="checkout-form-list">
-<label>Town / City <span class="required">*</span></label>
-<input type="text" placeholder="Town / City" />
-</div>
-</div>
-<div class="col-md-6">
-<div class="checkout-form-list">
-<label>State / County <span class="required">*</span></label>
-<input type="text" placeholder="" />
+<label>State / Country <span class="required">*</span></label>
+<input type="text" placeholder="State / County" id="country" />
 </div>
 </div>
 <div class="col-md-6">
 <div class="checkout-form-list">
 <label>Postcode / Zip <span class="required">*</span></label>
-<input type="text" placeholder="Postcode / Zip" />
+<input type="text" placeholder="Postcode / Zip" id="postcode" />
 </div>
 </div>
 <div class="col-md-6">
 <div class="checkout-form-list">
 <label>Email Address <span class="required">*</span></label>
-<input type="email" placeholder="" />
+<input type="email" placeholder="Email Address" id="email" />
 </div>
 </div>
 <div class="col-md-6">
 <div class="checkout-form-list">
 <label>Phone <span class="required">*</span></label>
-<input type="text" placeholder="Postcode / Zip" />
-</div>
-</div>
-</div>
-<div class="order-notes">
-<div class="checkout-form-list">
-<label>Order Notes</label>
-<textarea id="checkout-mess" cols="30" rows="10" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+<input type="text" placeholder="Phone" id="phone" />
 </div>
 </div>
 </div>
@@ -599,8 +433,8 @@ Remember me
 <th class="product-total">Total</th>
 </tr>
 </thead>
-<tbody>
-<tr class="cart_item">
+<tbody id="checkout_products">
+<!-- <tr class="cart_item">
 <td class="product-name">
 Vestibulum suscipit <strong class="product-quantity"> × 1</strong>
 </td>
@@ -615,34 +449,24 @@ Vestibulum dictum magna	<strong class="product-quantity"> × 1</strong>
 <td class="product-total">
 <span class="amount">£50.00</span>
 </td>
-</tr>
+</tr> -->
 </tbody>
 <tfoot>
 <tr class="cart-subtotal">
 <th>Cart Subtotal</th>
-<td><span class="amount">£215.00</span></td>
+<td><span class="amount">Rs </span><span class="amount" id="subTotal"></span></td>
 </tr>
 <tr class="shipping">
 <th>Shipping</th>
 <td>
 <ul>
-<li>
-<input type="radio" />
-<label>
-Flat Rate: <span class="amount">£7.00</span>
-</label>
-</li>
-<li>
-<input type="radio" />
-<label>Free Shipping:</label>
-</li>
-<li></li>
+<li>Rs <span id="shipping">500</span></li>
 </ul>
 </td>
 </tr>
 <tr class="order-total">
 <th>Order Total</th>
-<td><strong><span class="amount">£215.00</span></strong>
+<td><strong><span class="amount">Rs </span><span class="amount" id="orderTotal"></span></strong>
 </td>
 </tr>
 </tfoot>
@@ -651,50 +475,22 @@ Flat Rate: <span class="amount">£7.00</span>
 <div class="payment-method">
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 <div class="panel panel-default">
-<div class="panel-heading" role="tab" id="headingOne">
-<h4 class="panel-title">
-<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-Direct Bank Transfer
-</a>
-</h4>
-</div>
-<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-<div class="panel-body">
-<p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<div class="panel-heading" role="tab" id="headingTwo">
-<h4 class="panel-title">
- <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-Cheque Payment
-</a>
-</h4>
-</div>
-<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-<div class="panel-body">
-<p>Please send your cheque to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
 <div class="panel-heading" role="tab" id="headingThree">
 <h4 class="panel-title">
 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-PayPal
+Cash On Delivery
 </a>
 </h4>
 </div>
 <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
 <div class="panel-body">
-<p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal account.</p>
+<p>We Deliver Your Product With Love & Care. </p>
 </div>
 </div>
 </div>
 </div>
 <div class="order-button-payment">
-<input type="submit" value="Place order" />
+<input type="submit" onclick="placeOrder()" value="Place order" />
 </div>
 </div>
 </div>
@@ -841,5 +637,5 @@ PayPal
 <script src="js/main.js"></script>
 </body>
 
-<!-- Mirrored from richman.keepgoods.com/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 13 Oct 2020 17:30:53 GMT -->
+
 </html>
