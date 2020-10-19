@@ -1,12 +1,864 @@
-{ 
+
+{
+  
+  "category": [
+    {
+      "name": "Man",
+      "id": 1
+    },
+    {
+      "name": "Woman",
+      "id": 2
+    },
+    {
+      "name": "Kids",
+      "id": 3
+    },
+    {
+      "name": "Accessories",
+      "id": 4
+    }
+  ],
+  "sub_category": [
+    {
+      "name": "Hoodies",
+      "id": 1,
+      "parent_id": 1,
+      "products_id": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "name": "T-shirts&nbspand&nbspTops",
+      "id": 2,
+      "parent_id": 1
+    },
+    {
+      "name": "Suits",
+      "id": 3,
+      "parent_id": 1
+    },
+    {
+      "name": "Shorts",
+      "id": 4,
+      "parent_id": 1
+    },
+    {
+      "name": "Jumpsuits",
+      "id": 5,
+      "parent_id": 1
+    },
+    {
+      "name": "Jeans",
+      "id": 6,
+      "parent_id": 1
+    },
+    {
+      "name": "Hoodies",
+      "id": 7,
+      "parent_id": 2
+    },
+    {
+      "name": "Tshirts",
+      "id": 8,
+      "parent_id": 2
+    },
+    {
+      "name": "Party&nbspWear",
+      "id": 9,
+      "parent_id": 2
+    },
+    {
+      "name": "Jeans",
+      "id": 10,
+      "parent_id": 2
+    },
+    {
+      "name": "Tops",
+      "id": 11,
+      "parent_id": 2
+    },
+    {
+      "name": "Hoodies",
+      "id": 12,
+      "parent_id": 3
+    },
+    {
+      "name": "Tshirts",
+      "id": 13,
+      "parent_id": 3
+    },
+    {
+      "name": "Beach&nbspwear",
+      "id": 14,
+      "parent_id": 3
+    },
+    {
+      "name": "Jeans",
+      "id": 15,
+      "parent_id": 3
+    },
+    {
+      "name": "Tops",
+      "id": 16,
+      "parent_id": 3
+    },
+    {
+      "name": "Jewlery",
+      "id": 17,
+      "parent_id": 4
+    },
+    {
+      "name": "Belts",
+      "id": 18,
+      "parent_id": 4
+    },
+    {
+      "name": "Beauty",
+      "id": 19,
+      "parent_id": 4
+    },
+    {
+      "name": "Hats|Beanies",
+      "id": 20,
+      "parent_id": 4
+    }
+  ],
+  "products": [
+    {
+      "name": "Black&nbspHoodie",
+      "id": 1,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "img": "https://static.pullandbear.net/2/photos//2020/V/0/2/p/5596/710/800/5596710800_2_6_8.jpg?t=1582547133537&imwidth=1125",
+      "color": "#aee0ae",
+      "price": 80,
+      "quantity": 1,
+      "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
+      "parent_id": 1,
+      "reviews": [
+        {
+          "comment": "nice",
+          "stars": 2
+        },
+        {
+          "comment": "nice",
+          "stars": 2
+        },
+        {
+          "comment": "nice",
+          "stars": 6
+        },
+        {
+          "comment": "nice",
+          "stars": 2
+        }
+      ]
+    },
+    {
+      "name": "Blue&nbspHoodie",
+      "id": 2,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "img": "https://www.joma-sport.com/files/0001/jomabeta987543098359809538245098/web.system/assets/products/20171116165035.900696.722.jpg",
+      "color": "#aee0ae",
+      "price": 78,
+      "quantity": 1,
+      "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
+      "parent_id": 1,
+      "reviews": [
+        {
+          "comment": "nice",
+          "stars": 3
+        },
+        {
+          "comment": "nice",
+          "stars": 1
+        },
+        {
+          "comment": "nice",
+          "stars": 2
+        },
+        {
+          "comment": "nice",
+          "stars": 1
+        },
+        {
+          "comment": "nice",
+          "stars": 1
+        }        
+      ]
+    },
+    {
+      "name": "Funky&nbspT-shirt",
+      "id": 3,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "img": "https://www.joebrowns.co.uk/media/catalog/product/S/M/SM290A_1.jpg?width=600&height=720&quality=100&bg-color=255,255,255&fit=bounds",
+      "color": "#aee0ae",
+      "price": 54,
+      "quantity": 1,
+      "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
+      "parent_id": 2,
+      "reviews": [
+        {
+          "comment": "nice",
+          "stars": 4
+        },
+        {
+          "comment": "nice",
+          "stars": 5
+        },
+        {
+          "comment": "nice",
+          "stars": 2
+        },
+        {
+          "comment": "nice",
+          "stars": 3
+        },
+        {
+          "comment": "nice",
+          "stars": 5
+        }        
+      ]
+    },
+    {
+      "name": "Denim&nbspT-shirt",
+      "id": 4,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "img": "https://stylesatlife.com/wp-content/uploads/2017/05/White-wash-denim-shirt-for-men.jpg",
+      "color": "#aee0ae",
+      "price": 56,
+      "quantity": 1,
+      "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
+      "parent_id": 2,
+      "reviews": [
+        {
+          "comment": "nice",
+          "stars": 1
+        },
+        {
+          "comment": "nice",
+          "stars": 1
+        },
+        {
+          "comment": "nice",
+          "stars": 2
+        },
+        {
+          "comment": "nice",
+          "stars": 1
+        },
+        {
+          "comment": "nice",
+          "stars": 1
+        }        
+      ]
+    },
+    {
+      "name": "Black&nbspSuit",
+      "id": 5,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "img": "https://media.frenchconnection.com/ms/fcuk/55mbv-mens-fu-black-black-suit-jacket.jpg?404=fcuk/55mbv.jpg",
+      "color": "#aee0ae",
+      "price": 100,
+      "quantity": 1,
+      "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
+      "parent_id": 3,
+      "reviews": [
+        {
+          "comment": "nice",
+          "stars": 4
+        },
+        {
+          "comment": "nice",
+          "stars": 3
+        },
+        {
+          "comment": "nice",
+          "stars": 1
+        },
+        {
+          "comment": "nice",
+          "stars": 2
+        },
+        {
+          "comment": "nice",
+          "stars": 3
+        }        
+      ]
+    },
+    {
+      "name": "Blue&nbspSuit",
+      "id": 6,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "img": "https://i8.amplience.net/i/indochino/15010669_0_0/blue-solid-design-hamilton-suit.jpg?$suit-pdp-desk$",
+      "color": "#aee0ae",
+      "price": 90,
+      "quantity": 1,
+      "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
+      "parent_id": 3,
+      "reviews": [
+        {
+          "comment": "nice",
+          "stars": 2
+        },
+        {
+          "comment": "nice",
+          "stars": 1
+        },
+        {
+          "comment": "nice",
+          "stars": 5
+        },
+        {
+          "comment": "nice",
+          "stars": 1
+        },
+        {
+          "comment": "nice",
+          "stars": 1
+        }        
+      ]
+    },
+    {
+      "name": "Khark&nbspiShort",
+      "id": 7,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "img": "https://cdn.shopify.com/s/files/1/1008/6090/products/chino-shorts_sand_front_1500x.jpg?v=1547519061",
+      "color": "#aee0ae",
+      "price": 76,
+      "quantity": 1,
+      "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
+      "parent_id": 4,
+      "reviews": [
+        {
+          "comment": "nice",
+          "stars": 3
+        },
+        {
+          "comment": "nice",
+          "stars": 1
+        },
+        {
+          "comment": "nice",
+          "stars": 2
+        },
+        {
+          "comment": "nice",
+          "stars": 1
+        },
+        {
+          "comment": "nice",
+          "stars": 1
+        }        
+      ]
+    },
+    {
+      "name": "Red&nbspShort",
+      "id": 8,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "img": "https://www.escales-paris.com/media/catalog/product/cache/51088ad1ba675ab5d90fc9c63940817a/h/1/h191800-bermuda-lin-rouge-1ok.jpg",
+      "color": "#aee0ae",
+      "price": 75,
+      "quantity": 1,
+      "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
+      "parent_id": 4,
+      "reviews": [
+        {
+          "comment": "nice",
+          "stars": 3
+        },
+        {
+          "comment": "nice",
+          "stars": 1
+        },
+        {
+          "comment": "nice",
+          "stars": 2
+        },
+        {
+          "comment": "nice",
+          "stars": 1
+        },
+        {
+          "comment": "nice",
+          "stars": 1
+        }        
+      ]
+    },
+    {
+      "name": "Goblin&nbspGreen&nbspJumpSuit",
+      "id": 9,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "img": "https://images-na.ssl-images-amazon.com/images/I/71h%2BehsxsaL._AC_UX522_.jpg",
+      "color": "#aee0ae",
+      "price": 71,
+      "quantity": 1,
+      "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
+      "parent_id": 5,
+      "reviews": [
+      {
+        "comment": "nice",
+        "stars": 2
+      },
+      {
+        "comment": "nice",
+        "stars": 1
+      },
+      {
+        "comment": "nice",
+        "stars": 1
+      }]
+    },
+    {
+      "name": "Denim&nbspJumpSuit",
+      "id": 10,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "img": "https://i.pinimg.com/originals/8e/b1/00/8eb100fa1e356c0450f5301d37a371fe.jpg",
+      "color": "#aee0ae",
+      "price": 182,
+      "quantity": 1,
+      "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
+      "parent_id": 5
+    },
+    {
+      "name": "Denim&nbspJeans",
+      "id": 11,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "img": "https://slimages.macysassets.com/is/image/MCY/products/2/optimized/8635642_fpx.tif?op_sharpen=1&wid=500&hei=613&fit=fit,1&$filtersm$",
+      "color": "#aee0ae",
+      "price": 180,
+      "quantity": 1,
+      "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
+      "parent_id": 6
+    },
+    {
+      "name": "Ripped&nbspJeans",
+      "id": 12,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "img": "https://images-na.ssl-images-amazon.com/images/I/81W3syQ-zwL._AC_UL1500_.jpg",
+      "color": "#aee0ae",
+      "price": 230,
+      "quantity": 1,
+      "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
+      "parent_id": 6
+    },
+    {
+      "name": "Pink&nbspHoodie",
+      "id": 13,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "img": "https://ae01.alicdn.com/kf/HTB1Oik5zyCYBuNkSnaVq6AMsVXav/Hoodies-women-girls-Planet-stars-print-korean-fashion-Summer-Autumn-Party-Beach-Long-Sleeve-cropped-top.jpg",
+      "color": "#aee0ae",
+      "price": 43,
+      "quantity": 1,
+      "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
+      "parent_id": 7
+    },
+    {
+      "name": "Friends&nbspHoodie",
+      "id": 14,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "img": "https://lh3.googleusercontent.com/proxy/8CBde1Ed_01AOHgYU51Zs4d8Auk1YgezsIAsB0ASBDPZRJhjBIwg2Xvmn6YiDNHif6-0VlMi0u7oIGJWUSEUDqRixKrlkIAJRRxWnLuhBF6diH6VflUQzuM",
+      "color": "#aee0ae",
+      "price": 21,
+      "quantity": 1,
+      "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
+      "parent_id": 7
+    },
+    {
+      "name": "Motivation&nbspTshirt",
+      "id": 15,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "img": "https://zadig-et-voltaire.imgix.net//p/w/pwgtr1801f_blanc_2_1.jpg?h=2048&w=1366",
+      "color": "#aee0ae",
+      "price": 26,
+      "quantity": 1,
+      "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
+      "parent_id": 8
+    },
+    {
+      "name": "Classy&nbspTshirt",
+      "id": 16,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "img": "https://cdn.cliqueinc.com/posts/241699/how-to-wear-oversize-t-shirts-241699-1588735536540-main.700x0c.jpg",
+      "color": "#aee0ae",
+      "price": 192,
+      "quantity": 1,
+      "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
+      "parent_id": 8
+    },
+    {
+      "name": "Classy&nbspPartywear",
+      "id": 17,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "img": "https://c.shld.net/rpx/i/s/pi/mp/32682/prod_16305401711?src=http%3A%2F%2Fi1152.photobucket.com%2Falbums%2Fp484%2Flillilcn%2FAMAZON%2FDR9181BKBLU1.jpg&d=18fcf8c3ddbb555f29251fb8c9b6dee95dc0e73d&hei=660&wid=660&op_sharpen=1",
+      "color": "#aee0ae",
+      "price": 112,
+      "quantity": 1,
+      "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
+      "parent_id": 9
+    },
+    {
+      "name": "White&nbspPartywear",
+      "id": 18,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "img": "https://www.zainabchottani.com/images/thumbs/0009732_ash-white-and-tea-pink.jpeg",
+      "color": "#aee0ae",
+      "price": 142,
+      "quantity": 1,
+      "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
+      "parent_id": 9
+    },
+    {
+      "name": "Ripped&nbspJeans",
+      "id": 19,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "img": "https://i.pinimg.com/originals/92/05/47/920547227c333f442c13393635fcb608.jpg",
+      "color": "#aee0ae",
+      "price": 122,
+      "quantity": 1,
+      "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
+      "parent_id": 10
+    },
+    {
+      "name": "Plain&nbspJeans",
+      "id": 20,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "img": "https://oldnavy.gap.com/webcontent/0017/442/020/cn17442020.jpg",
+      "color": "#aee0ae",
+      "price": 122,
+      "quantity": 1,
+      "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
+      "parent_id": 10
+    },
+    {
+      "name": "Yellow&nbspTops",
+      "id": 21,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "img": "https://assets.ajio.com/medias/sys_master/root/h85/h18/14472894447646/-1117Wx1400H-460249411-yellow-MODEL.jpg",
+      "color": "#aee0ae",
+      "price": 22,
+      "quantity": 1,
+      "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
+      "parent_id": 11
+    },
+    {
+      "name": "Green&nbspLeaf&nbspTops",
+      "id": 22,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "img": "https://i.pinimg.com/originals/a0/58/19/a0581981a41b84414905c8fc3f425ac1.jpg",
+      "color": "#aee0ae",
+      "price": 18,
+      "quantity": 1,
+      "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
+      "parent_id": 11
+    }
+  ],
+  "cartProduct": [
+    {
+      "id": 3,
+      "name": "Funky&nbspT-shirt",
+      "price": 54,
+      "img": "https://www.joebrowns.co.uk/media/catalog/product/S/M/SM290A_1.jpg?width=600&height=720&quality=100&bg-color=255,255,255&fit=bounds",
+      "quantity": 1,
+      "parent_id": 2,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "color": "#aee0ae"
+    },
+    {
+      "id": 11,
+      "name": "Denim&nbspJeans",
+      "price": 180,
+      "img": "https://slimages.macysassets.com/is/image/MCY/products/2/optimized/8635642_fpx.tif?op_sharpen=1&wid=500&hei=613&fit=fit,1&$filtersm$",
+      "quantity": 1,
+      "parent_id": 6,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "color": "#aee0ae"
+    },
+    {
+      "id": 12,
+      "name": "Ripped&nbspJeans",
+      "price": 230,
+      "img": "https://images-na.ssl-images-amazon.com/images/I/81W3syQ-zwL._AC_UL1500_.jpg",
+      "quantity": 1,
+      "parent_id": 6,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "color": "#aee0ae"
+    },
+    {
+      "id": 15,
+      "name": "Motivation&nbspTshirt",
+      "price": 26,
+      "img": "https://zadig-et-voltaire.imgix.net//p/w/pwgtr1801f_blanc_2_1.jpg?h=2048&w=1366",
+      "quantity": 1,
+      "parent_id": 8,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "color": "#aee0ae"
+    },
+    {
+      "id": 16,
+      "name": "Classy&nbspTshirt",
+      "price": 192,
+      "img": "https://cdn.cliqueinc.com/posts/241699/how-to-wear-oversize-t-shirts-241699-1588735536540-main.700x0c.jpg",
+      "quantity": 1,
+      "parent_id": 8,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "color": "#aee0ae"
+    },
+    {
+      "id": 21,
+      "name": "Yellow&nbspTops",
+      "price": 22,
+      "img": "https://assets.ajio.com/medias/sys_master/root/h85/h18/14472894447646/-1117Wx1400H-460249411-yellow-MODEL.jpg",
+      "quantity": 1,
+      "parent_id": 11,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "color": "#aee0ae"
+    },
+    {
+      "id": 20,
+      "name": "Plain&nbspJeans",
+      "price": 122,
+      "img": "https://oldnavy.gap.com/webcontent/0017/442/020/cn17442020.jpg",
+      "quantity": 1,
+      "parent_id": 10,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "color": "#aee0ae"
+    },
+    {
+      "id": 22,
+      "name": "Green&nbspLeaf&nbspTops",
+      "price": 18,
+      "img": "https://i.pinimg.com/originals/a0/58/19/a0581981a41b84414905c8fc3f425ac1.jpg",
+      "quantity": 1,
+      "parent_id": 11,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "color": "#aee0ae"
+    },
+    {
+      "id": 8,
+      "name": "Red&nbspShort",
+      "price": 75,
+      "img": "https://www.escales-paris.com/media/catalog/product/cache/51088ad1ba675ab5d90fc9c63940817a/h/1/h191800-bermuda-lin-rouge-1ok.jpg",
+      "quantity": 1,
+      "parent_id": 4,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "color": "#aee0ae"
+    },
+    {
+      "id": 19,
+      "name": "Ripped&nbspJeans",
+      "price": 122,
+      "img": "https://i.pinimg.com/originals/92/05/47/920547227c333f442c13393635fcb608.jpg",
+      "quantity": 1,
+      "parent_id": 10,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "color": "#aee0ae"
+    },
+    {
+      "id": 6,
+      "name": "Blue&nbspSuit",
+      "price": 90,
+      "img": "https://i8.amplience.net/i/indochino/15010669_0_0/blue-solid-design-hamilton-suit.jpg?$suit-pdp-desk$",
+      "quantity": 1,
+      "parent_id": 3,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "color": "#aee0ae"
+    },
+    {
+      "id": 4,
+      "name": "Denim&nbspT-shirt",
+      "price": 56,
+      "img": "https://stylesatlife.com/wp-content/uploads/2017/05/White-wash-denim-shirt-for-men.jpg",
+      "quantity": 1,
+      "parent_id": 2,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "color": "#aee0ae"
+    },
+    {
+      "id": 2,
+      "name": "Blue&nbspHoodie",
+      "price": 78,
+      "img": "https://www.joma-sport.com/files/0001/jomabeta987543098359809538245098/web.system/assets/products/20171116165035.900696.722.jpg",
+      "quantity": 1,
+      "parent_id": 1,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "color": "#aee0ae"
+    },
+    {
+      "id": 1,
+      "name": "Black&nbspHoodie",
+      "price": 80,
+      "img": "https://static.pullandbear.net/2/photos//2020/V/0/2/p/5596/710/800/5596710800_2_6_8.jpg?t=1582547133537&imwidth=1125",
+      "quantity": 1,
+      "parent_id": 1,
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "color": "#aee0ae"
+    }
+  ],
+
   "settings": 
     { 
       "shipping":300,
       "theme":{
-                "logo":"https://sdtimes.com/wp-content/uploads/2019/10/og-databricks.png",
-                "homepage":"file:///D:/Stepway/Project/Ecommerce/index.html",
+                "logo":"https://scontent.fkhi1-1.fna.fbcdn.net/v/t1.0-9/120301694_105373511335388_2960321652920930453_o.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=KZ6bxcQoj5gAX9iPn7Z&_nc_ht=scontent.fkhi1-1.fna&oh=4d6d2401a6f7c88ce591bfbdf0285bdd&oe=5FB26461",
+                "homepage":"file:///D:/Stepway/Ecommerce/index.html",
 
-                "background_color" : "#fffa6c",
+                "background_color" : "#EFE2BA",
               	"color":"#666",
 	              "font_size":"14px",
 	              "font_family": "poppins",
@@ -89,68 +941,10 @@
 
 
               }
-    },
+    }
 
 
     
-    "cartProduct": [
-      {
-        "name": "Black&nbspHoodie",
-        "id": 1,
-        "size": [
-          "small",
-          "medium",
-          "large"
-        ],
-        "img": "https://static.pullandbear.net/2/photos//2020/V/0/2/p/5596/710/800/5596710800_2_6_8.jpg?t=1582547133537&imwidth=1125",
-        "color": "#aee0ae",
-        "price": 80,
-        "quantity": 1,
-        "parent_id": 1
-      },
-      
-      {
-        "id": 3,
-        "name": "Funky&nbspT-shirt",
-        "price": 54,
-        "img": "https://www.joebrowns.co.uk/media/catalog/product/S/M/SM290A_1.jpg?width=600&height=720&quality=100&bg-color=255,255,255&fit=bounds",
-        "quantity": 1,
-        "parent_id": 2,
-        "size": [
-          "small",
-          "medium",
-          "large"
-        ],
-        "color": "#aee0ae"
-      },
-      {
-        "id": 11,
-        "name": "Denim&nbspJeans",
-        "price": 180,
-        "img": "https://slimages.macysassets.com/is/image/MCY/products/2/optimized/8635642_fpx.tif?op_sharpen=1&wid=500&hei=613&fit=fit,1&$filtersm$",
-        "quantity": 1,
-        "parent_id": 6,
-        "size": [
-          "small",
-          "medium",
-          "large"
-        ],
-        "color": "#aee0ae"
-      },
-      {
-        "id": 12,
-        "name": "Ripped&nbspJeans",
-        "price": 230,
-        "img": "https://images-na.ssl-images-amazon.com/images/I/81W3syQ-zwL._AC_UL1500_.jpg",
-        "quantity": 1,
-        "parent_id": 6,
-        "size": [
-          "small",
-          "medium",
-          "large"
-        ],
-        "color": "#aee0ae"
-      }
-      
-    ]
+   
+
 }

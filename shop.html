@@ -31,11 +31,7 @@
 
 <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 <script src="js/settings.js"></script>
-<script>
-    window.onload = function(){
-        display();
-    }
-</script>
+
 
 </head>
 <body>
@@ -216,7 +212,7 @@
 <div class="subtotal-price">£300.00</div>
 </li>
 <li>
-<a class="cart-button" href="checkout.html">view cart</a>
+<a class="cart-button" href="cart.html">view cart</a>
 <a class="checkout" href="checkout.html">checkout</a>
 </li>
 </ul>
@@ -232,8 +228,8 @@
 <div class="position-center-center">
 <div class="search">
 <form>
-<input type="search" placeholder="Search Shop">
-<button type="submit"><i class="fa fa-search"></i></button>
+<input type="search" id="searchItem" placeholder="Search Shop">
+<button onclick="search()" type="submit"><i class="fa fa-search"></i></button>
 </form>
 </div>
 </div>
@@ -359,27 +355,27 @@
 
 <aside class="widget widget-categories">
 <h3 class="sidebar-title">Categories</h3>
-<ul class="sidebar-menu">
-<li><a href="#">Clothes</a> </li>
-<li><a href="#">Men</a> </li>
-<li><a href="#">Shoes</a> </li>
-<li><a href="#">Sunglasses</a></li>
-<li><a href="#">Women</a></li>
+<ul class="sidebar-menu" id="category">
+<!-- <li><a href="#">Clothes</a> <span class="count">(14)</span></li>
+<li><a href="#">Men</a> <span class="count">(9)</span></li>
+<li><a href="#">Shoes</a> <span class="count">(2)</span></li>
+<li><a href="#">Sunglasses</a> <span class="count">(2)</span></li>
+<li><a href="#">Women</a> <span class="count">(8)</span></li> -->
 </ul>
 </aside>
 
-<aside class="widget filter-by">
-        <h3 class="sidebar-title">Sub-Categories</h3>
-    <ul class="sidebar-menu">
-        <li><a href="#">Trouser</a></li>
-        <li><a href="#">Tshirts</a></li>
-        <li><a href="#">Shoes</a></li>
-    
-    </ul>
-</aside>
-    
+<aside class="widget filter-by" id="subCategoryText">
+    <!-- <h3 class="sidebar-title">Sub-Category</h3>
+    <ul class="sidebar-menu" id="subcategory"> -->
+    <!-- <li><a href="#">L</a> <span class="count">(1)</span></li>
+    <li><a href="#">M</a> <span class="count">(1)</span></li>
+    <li><a href="#">S</a> <span class="count">(1)</span></li>
+    <li><a href="#">XL</a> <span class="count">(1)</span></li>
+    <li><a href="#">XXL</a> <span class="count">(1)</span></li> -->
+    <!-- </ul> -->
+    </aside>
 
-
+    
 <aside class="widget shop-filter">
 <h3 class="sidebar-title">Filter selection</h3>
 <div class="info_widget">
@@ -492,13 +488,10 @@
 </ul>
 <div class="short-by">
 <span class="sorting-show"> Sort by:</span>
-<select>
-<option value="volvo">popularity</option>
-<option value="saab">Default</option>
-<option value="mercedes">average rating</option>
-<option value="audi">newness</option>
-<option value="audi">low to high</option>
-<option value="audi">high to low</option>
+<select id="sortByPrice" onchange="sort()">
+<option value="new">newness</option>
+<option value="asc">low to high</option>
+<option value="desc">high to low</option>
 </select>
 </div>
 <div class="shop-show">
@@ -514,9 +507,9 @@
 </div>
 <div class="shop-breadcrumb">
 <ul>
-<li class="active"><a href="#">1</a></li>
-<li><a href="#">2</a></li>
-<li><a href="#">3</a></li>
+<li class="active"><a href="#" onclick="showProducts()">1</a></li>
+<li><a href="#" onclick="showProductsForPageTwo()">2</a></li>
+<li><a href="#" onclick="showProductsForPageThree()">3</a></li>
 <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
 </ul>
 </div>
@@ -524,9 +517,9 @@
 
 <div class="tab-content">
 <div role="tabpanel" class="tab-pane active" id="home">
-<div class="row">
+<div class="row" id="products">
 
-<div class="col-md-4 col-sm-4">
+<!-- <div class="col-md-4 col-sm-4">
 <div class="single-product">
 <div class="product-img">
 <a href="product-details.html">
@@ -554,15 +547,15 @@
 </div>
 <h3><a href="product-details.html">Phasellus Vel Hendrerit</a></h3>
 <div class="price">
-<span>$70.00</span>
+<span>$720.00</span>
 <span class="old">$80.11</span>
 </div>
 </div>
 </div>
-</div>
+</div> -->
 
 
-<div class="col-md-4 col-sm-4">
+<!-- <div class="col-md-4 col-sm-4">
 <div class="single-product">
 <div class="product-img">
 <a href="product-details.html">
@@ -1337,7 +1330,7 @@
 </div>
 </div>
 </div>
-</div>
+</div> -->
 
 </div>
 </div>
@@ -1529,6 +1522,7 @@
 <script src="js/plugins.js"></script>
 
 <script src="js/main.js"></script>
+<script src="js/shop.js"></script>
 </body>
 
 

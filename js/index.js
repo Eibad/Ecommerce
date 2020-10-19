@@ -1,9 +1,9 @@
 window.onload = function homepage(){
-    display();
-    const urlParams = new URLSearchParams(window.location.search);
-    const reload = urlParams.get('reload');
-    debugger;
-    if(reload != "false"){
+    importTheme();
+    // const urlParams = new URLSearchParams(window.location.search);
+    // const reload = urlParams.get('reload');
+    // debugger;
+    // if(reload != "false"){
         let ajax = new XMLHttpRequest();
         ajax.open("GET","http://localhost:3000/settings");
         ajax.setRequestHeader("contant-type","application/json");
@@ -13,9 +13,9 @@ window.onload = function homepage(){
             let homepage=JSON.parse(this.response);
             debugger;
             // window.location.href=homepage.theme.homepage;
-            window.location.href=homepage.theme.homepage+"?reload=false";
-            window.document.location.hash = new Date().getTime();
-            event.preventDefault();
+            // window.location.href=homepage.theme.homepage+"?reload=false";
+            // window.document.location.hash = new Date().getTime();
+            // event.preventDefault();
             
             
         }
@@ -23,7 +23,7 @@ window.onload = function homepage(){
     }
     
    
-}
+//}
 
 // window.onload = function(){
 //     display();

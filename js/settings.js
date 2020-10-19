@@ -1,4 +1,4 @@
-function display(){
+function importTheme(){
 
     let ajax = new XMLHttpRequest();
     ajax.open("GET","http://localhost:3000/settings");
