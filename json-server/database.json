@@ -1,11 +1,6 @@
+
 {
-  "settings": {
-    "theme": {
-      "background": "blue",
-      "color": "#aee0ae",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Oikya_Front_Logo.png"
-    }
-  },
+  
   "category": [
     {
       "name": "Man",
@@ -854,5 +849,102 @@
       ],
       "color": "#aee0ae"
     }
-  ]
+  ],
+
+  "settings": 
+    { 
+      "shipping":300,
+      "theme":{
+                "logo":"https://scontent.fkhi1-1.fna.fbcdn.net/v/t1.0-9/120301694_105373511335388_2960321652920930453_o.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=KZ6bxcQoj5gAX9iPn7Z&_nc_ht=scontent.fkhi1-1.fna&oh=4d6d2401a6f7c88ce591bfbdf0285bdd&oe=5FB26461",
+                "homepage":"file:///D:/Stepway/Ecommerce/index.html",
+
+                "background_color" : "#EFE2BA",
+              	"color":"#666",
+	              "font_size":"14px",
+	              "font_family": "poppins",
+
+	              "header_background":"#ffffff",
+	              "header_font_size":"14px",
+	              "header_color":"#000000",
+	              "header_hover":"#fe4847",
+                "header_cart_color":"#12b692",
+                "header_cart_dropdown_background":"#ffffff",
+	              "header_cart_dropdown_color":"#000",
+	              "header_dropdown_background":"black",
+	              "header_dropdown_color":"#ffffff",
+	              "header_dropdown_hover":"#fe4847",
+
+	              "banner_image":"url(https://fivmagazine.com/wp-content/uploads/2019/07/beitragsbild-foto-shooting-model-commercial-fashion.jpg)",
+	              "banner_color":"black",
+	              "banner_font_size":"34px",
+
+               
+	              "btn_background":"orange",
+	              "btn_color":"#fff",
+	              "btn_hover":"#fff",
+	              "btn_hover_color":"#444",
+	              "pagination_color":"#444",
+	              "btn_top_background":"#fff",
+	              "btn_top_color":"#444",
+	              "btn_top_hover":"#fe4847",
+	              "btn_top_hover_color":"#fff",
+
+	              "breadcrumb_color":"#444",
+	              "breadcrumb_hover":"#fe4847",
+	              "breadcrumb_font_size":"13px",
+
+	              "sidebar_title_color":"#444",
+                "sidebar_title_font_size":"17px",
+                
+                "product_font_family": "raleway",
+	              "product_font_size":"15px",
+	              "product_color":"#555",
+                
+                
+                "price_color":"#212121",
+	              "price_font_size":"28px",
+
+	              "footer_top_background": "#141414",
+	              "footer_bottom_background": "#222",
+	              "footer_title_color":"#fff",
+	              "footer_p_color":"#d5d5d5",
+	              "footer_p_font_size":"13px",
+	              "footer_social_background":"#2c2c2c",
+	              "footer_social_color":"#fff",
+                "footer_social_hover":"#fe4847",
+                
+
+                "product_details_name_color":"#444",
+	              "product_details_name_hover":"#fe4847",
+	              "product_details_name_font_size":"24px",
+	              "product_details_price_font_size":"20px",
+                "product_details_p_color":"#444",
+                
+                "product_details_star":"green",
+
+	              "homepage_banner1": "url('https://www.thebalancecareers.com/thmb/dzyNOebiKhXB2-eihjPMipegRJw=/3863x2578/filters:fill(auto,1)/handsome-man-in-winter-elegant-clothes-outdoors-640999618-5ae3e63d642dca0037b41894.jpg')",
+                "homepage_banner2": "url('https://fivmagazine.com/wp-content/uploads/2019/07/beitragsbild-foto-shooting-model-commercial-fashion.jpg')",
+                "homepage_banner3": "url('https://dvyvvujm9h0uq.cloudfront.net/com/articles/1514474020-tips-for-aspiring-fashion-models.jpg')",
+
+
+	              "slider_color":"#fff",
+                "slider_p_color":"#fff",
+	              "slider_btn_border":"#fff",
+	              "slider_btn_color":"#fff",
+	              "slider_btn_background": "#fff",
+	              "slider_btn_hover_color": "#444",
+
+                "newsletter_background":"#131920",
+                "newsletter_color":"#fff",
+	              "newsletter_p_color":"#fff"
+
+
+
+              }
+    }
+
+
+    
+   
+
 }

@@ -1,4 +1,6 @@
 window.onload = function viewCategory(){
+
+    importTheme();
     let display="";
     let ajax = new XMLHttpRequest();
     ajax.open("GET","http://localhost:3000/category")
