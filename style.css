@@ -3345,6 +3345,20 @@ p.checkout-coupon input[type=submit] {
 	color: var(--btn-background);
 }
 
+.order-button-payment button {
+	background: var(--btn-background) none repeat scroll 0 0;
+	border: medium;
+	color: var(--btn-color);
+	font-size: 15px;
+	font-weight: 600;
+	height: 40px;
+	margin: 0 0 0;
+	padding: 0;
+	text-transform: uppercase;
+	transition: all .3s ease 0s;
+	width: 100%
+}
+
 .order-button-payment input {
 	background: var(--btn-background) none repeat scroll 0 0;
 	border: medium;
@@ -3357,6 +3371,13 @@ p.checkout-coupon input[type=submit] {
 	text-transform: uppercase;
 	transition: all .3s ease 0s;
 	width: 100%
+}
+
+.order-button-payment button:hover {
+	background: var(--btn-hover) none repeat scroll 0 0;
+	color: var(--btn-hover-color);
+	border: 1px solid var(--btn-hover-color);
+
 }
 
 .order-button-payment input:hover {

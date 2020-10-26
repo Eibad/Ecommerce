@@ -7,6 +7,16 @@ function importTheme(){
     ajax.onload=function(){
 
     let settings = JSON.parse(this.response);  
+    localStorage.setItem('theme',JSON.stringify(settings));
+    theme();
+    }
+    ajax.send();
+
+}
+
+function theme(){
+
+    let settings = JSON.parse(localStorage.getItem('theme'));
     var colorScheme = document.documentElement.style;
     colorScheme.setProperty('--background-color', settings.theme.background_color);
     colorScheme.setProperty('--color', settings.theme.color);
@@ -17,9 +27,9 @@ function importTheme(){
     colorScheme.setProperty('--header-color', settings.theme.header_color);
     colorScheme.setProperty('--header-hover', settings.theme.header_hover);
     colorScheme.setProperty('--header-cart-color', settings.theme.header_cart_color);
-    colorScheme.setProperty('--header-cart-dropdown-background', settings.theme.header_cart_color);
-    colorScheme.setProperty('--header-cart-dropdown-color', settings.theme.header_cart_dropdown_background);
-    colorScheme.setProperty('--header-dropdown-background', settings.theme.header_cart_dropdown_color);
+    colorScheme.setProperty('--header-cart-dropdown-background', settings.theme.header_cart_dropdown_background);
+    colorScheme.setProperty('--header-cart-dropdown-color', settings.theme.header_cart_dropdown_color);
+    colorScheme.setProperty('--header-dropdown-background', settings.theme.header_dropdown_background);
     colorScheme.setProperty('--header-dropdown-color', settings.theme.header_dropdown_color);
     colorScheme.setProperty('--header-dropdown-hover', settings.theme.header_dropdown_hover);
     colorScheme.setProperty('--banner-image', settings.theme.banner_image);
@@ -83,10 +93,4 @@ function importTheme(){
 
     document.getElementById('logo').src = settings.theme.logo;
 
-
-    }
-    ajax.send();
-
 }
-
-

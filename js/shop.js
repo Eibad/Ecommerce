@@ -1,6 +1,11 @@
 window.onload = function viewCategory(){
 
-    importTheme();
+    if(localStorage.getItem('theme')){
+        theme();
+    }else{
+        importTheme();
+    } 
+
     let display="";
     let ajax = new XMLHttpRequest();
     ajax.open("GET","http://localhost:3000/category")
@@ -24,6 +29,9 @@ window.onload = function viewCategory(){
     ajax.send();
 
     showProducts();
+
+    let cart = getCartFromLocalStorage();
+    document.getElementById('productCount').innerHTML = cart !=undefined ? cart.products.length : 0;
 }
 
 function show(id,parent_id){
@@ -107,7 +115,7 @@ function showProducts(){
         for(let i=0; i<=productList[i].reviews.length-1; i++){
             
             countStars = countStars + productList[i].reviews[i].stars;
-            console.log(countStars)
+            // console.log(countStars)
         
         }
 
@@ -160,7 +168,7 @@ function showProducts(){
             </div>
             <h3><a onclick="show('${productList[i].id}','${productList[i].parent_id}')">${productList[i].name}</a></h3>
             <div class="price">
-            <span>$${productList[i].price}</span>
+            <span>Rs ${productList[i].price}</span>
             <span class="old">$80.11</span>
             </div>
             </div>
@@ -238,7 +246,7 @@ function showProductsForPageTwo(){
             </div>
             <h3><a href="product-details.html">${productList[i].name}</a></h3>
             <div class="price">
-            <span>$${productList[i].price}</span>
+            <span>Rs ${productList[i].price}</span>
             <span class="old">$80.11</span>
             </div>
             </div>
@@ -316,7 +324,7 @@ function showProductsForPageThree(){
             </div>
             <h3><a href="product-details.html">${productList[i].name}</a></h3>
             <div class="price">
-            <span>$${productList[i].price}</span>
+            <span>Rs ${productList[i].price}</span>
             <span class="old">$80.11</span>
             </div>
             </div>
@@ -396,7 +404,7 @@ function showSelectedSubCategoryProducts(data){
             </div>
             <h3><a href="product-details.html">${productList[i].name}</a></h3>
             <div class="price">
-            <span>$${productList[i].price}</span>
+            <span>Rs ${productList[i].price}</span>
             <span class="old">$80.11</span>
             </div>
             </div>
@@ -477,7 +485,7 @@ function search(){
                 </div>
                 <h3><a href="product-details.html">${productList[i].name}</a></h3>
                 <div class="price">
-                <span>$${productList[i].price}</span>
+                <span>Rs ${productList[i].price}</span>
                 <span class="old">$80.11</span>
                 </div>
                 </div>
@@ -567,7 +575,7 @@ function sort(){
             </div>
             <h3><a href="product-details.html">${productList[i].name}</a></h3>
             <div class="price">
-            <span>$${productList[i].price}</span>
+            <span>Rs ${productList[i].price}</span>
             <span class="old">$80.11</span>
             </div>
             </div>
@@ -586,25 +594,95 @@ function sort(){
 
 
 
-function addToCart(data){
 
-    let obj = JSON.parse(data);  
-    let ajax = new XMLHttpRequest();
+function addToCart(product){
+
+    let parsedProduct = JSON.parse(product);
     
-    ajax.open("POST", "http://localhost:3000/cartProduct")
-    ajax.setRequestHeader("content-type", "application/json")
-    ajax.onprogress = function () {
-        // console.log("the call is in pr")
-    }
-    ajax.onload = function () {
+   
+    debugger;
+
+    let cart = getCartFromLocalStorage();
+
+    if(cart != null){
+
+        let requestBody = processForCartDistinctProduct(parsedProduct);
+         
+        let ajax = new XMLHttpRequest();
+        ajax.open("PUT","http://localhost:3000/cart/"+requestBody.id);
+        ajax.setRequestHeader("content-type","application/json");
+        ajax.onprogress = function(){
+
+        };
+        ajax.onload = function(){
+
+            
         
-        alert("Product is added")
-        
+        }
+        ajax.send(JSON.stringify(requestBody));
+    }else{
+
+        let obj = {
+            "amount": parsedProduct.price,
+            "products":[parsedProduct]
+        }
+    
+
+        let ajax = new XMLHttpRequest();
+        ajax.open("POST","http://localhost:3000/cart");
+        ajax.setRequestHeader("content-type","application/json");
+        ajax.onprogress = function(){};
+        ajax.onload = function(){
+            
+            let cart = JSON.parse(this.response);
+            localStorage.setItem("cart",JSON.stringify(cart));
+
+            document.getElementById('productCount').innerHTML = cart !=undefined ? cart.products.length : 0;
+
+            
+        }
+     
+        ajax.send(JSON.stringify(obj));
+
     }
     
-    cartProduct = JSON.stringify(obj);
-    ajax.send(cartProduct)
+
+    function processForCartDistinctProduct(parsedProduct){
+        
+       let cart = getCartFromLocalStorage();
+       if(cart.products.find(el=> el.id == parsedProduct.id)){
+           let ind = cart.products.findIndex(el=> el.id == parsedProduct.id);
+           cart.products[ind].quantity++;
+           cart.amount += cart.products[ind].price;
+           localStorage.setItem('cart',JSON.stringify(cart));
+
+           return cart ;
+
+           debugger;
+
+       }else{
+
+        cart.products.push(parsedProduct);
+        cart.amount += parsedProduct.price;
+        localStorage.setItem("cart",JSON.stringify(cart));
+        document.getElementById('productCount').innerHTML = cart !=undefined ? cart.products.length : 0;
+        return cart;
+        debugger;
+        
+       }
+
+
+    }
+    
+
+
+
+
+   
+
 
 }
+
+
 
 

@@ -14,6 +14,16 @@ function getParams (url) {
 };
 
 window.onload = function showProductDetails(){    
+
+    if(localStorage.getItem('theme')){
+        theme();
+    }else{
+        importTheme();
+    } 
+    
+    let cart = getCartFromLocalStorage();
+    document.getElementById('productCount').innerHTML = cart !=undefined ? cart.products.length : 0;
+
     let ajax = new XMLHttpRequest();
     let obj = this.getParams(window.location.href);
     

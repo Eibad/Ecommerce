@@ -1,91 +1,71 @@
-var cartProduct;
+window.onload = function(){
 
-window.onload = function checkout(){
-    display();
-    let ajax= new XMLHttpRequest();
-    ajax.open("GET","http://localhost:3000/cartProduct");
-    ajax.setRequestHeader("content-type","application/json");
-    ajax.onprogress=function(){};
-    ajax.onload=function(){
+    if(localStorage.getItem('theme')){
+        theme();
+    }else{
+        importTheme();
+    } 
 
-        let a="";
-        let b="";
+    let cart = getCartFromLocalStorage();
+    if(!cart){
+        return
+    }else{
 
-        let subTotal2=0;
+    
+    document.getElementById('productCount').innerHTML = cart !=undefined ? cart.products.length : 0;
+    checkout();
+    }
 
-         cartProduct= JSON.parse(this.response);
+    
 
-        for(let i=0;i<=cartProduct.length-1;i++){
+}    
 
-            a = a + `<tr class="cart_item">
-                    <td class="product-name">${cartProduct[i].name} <strong class="product-quantity">x ${cartProduct[i].quantity}</strong></td>
-                    <td class="product-total" ><span class="amount">Rs ${(cartProduct[i].price)*(cartProduct[i].quantity)}</span></td>
-                </tr>`
 
-            subTotal2 = subTotal2 + (cartProduct[i].price)*(cartProduct[i].quantity) ;    
+function checkout(){
+        
+        let cartProduct = "";
+        let cart = getCartFromLocalStorage();
+        let settings = getSettingsFromLocalStorage();
 
+        for(let i=0;i<=cart.products.length-1;i++){
+
+            cartProduct = cartProduct + `<tr class="cart_item">
+                    <td class="product-name">${cart.products[i].name} <strong class="product-quantity">x ${cart.products[i].quantity}</strong></td>
+                    <td class="product-total" ><span class="amount">Rs ${(cart.products[i].price)*(cart.products[i].quantity)}</span></td>
+                 </tr>`    
 
             
         }
 
-        for(let i=0;i<=2;i++){
-
-            b = b + `<li>
-                        <div class="cart-img">
-                            <a href="#"><img style="width:50px;height:67px" alt="" src="${cartProduct[i].img}"></a>
-                        </div>
-                        <div class="cart-info">
-                            <h4><a href="#">${cartProduct[i].name}</a></h4>
-                            <span>Rs ${cartProduct[i].price} <span>x ${cartProduct[i].quantity}</span></span>
-                        </div>
-                        <div class="del-icon">
-                            <i class="fa fa-times-circle"></i>
-                        </div>
-                    </li>`
-
-        }
-
-            b = b + `<li class="cart-border">
-                        <div class="subtotal-text">Subtotal: </div>
-                        <div class="subtotal-price">Rs ${subTotal2}</div>
-                     </li>
-                     <li>
-                        <a class="cart-button" href="cart.html">view cart</a>
-                        <a class="checkout" href="checkout.html">checkout</a>
-                     </li>`;
-
-        document.getElementById("checkout_products").innerHTML = a;
-
-        document.getElementById("headerCart").innerHTML = b;
-
-        document.getElementById("subTotal").innerHTML = subTotal2;
-
-        console.log(subTotal2);
-
-        
-
-        
-        orderTotal();
-
-    }
-    ajax.send();
-
-   
-    
-    
-    
-
-    
+        document.getElementById('checkout_products').innerHTML = cartProduct;
+        document.getElementById('subTotal').innerHTML = cart.amount; 
+        document.getElementById('shipping').innerHTML = settings.shipping;
+        document.getElementById('orderTotal').innerHTML = (cart.amount+settings.shipping);
 
 
-    
 
 }
 
 
+
+
 function placeOrder(){
+    debugger;
+
+    let cart = getCartFromLocalStorage();
+    let settings = getSettingsFromLocalStorage();
+
+    let orderAmount = cart.amount+settings.shipping ;
 
     class placeOrder{
+
+        cartId = cart.id;
+        orderAmount = orderAmount;
+        orderStatus = "New";
+        orderDate = new Date();
+
+
+
         constructor(fname,lname,address,city,country,postcode,email,phone){
             this.fname = fname ;
             this.lname = lname ;
@@ -95,6 +75,7 @@ function placeOrder(){
             this.postcode = postcode ;
             this.email = email ;
             this.phone = phone ;
+            
         }
     }
 
@@ -110,21 +91,21 @@ function placeOrder(){
    const obj = new placeOrder(fname,lname,address,city,country,postcode,email,phone);
    
     
-   console.log(obj);
-   console.log(cartProduct);
+   let ajax = new XMLHttpRequest();
+   ajax.open("POST","http://localhost:3000/order");
+   ajax.setRequestHeader("content-type","application/json");
+   ajax.onprogress = function(){};
+   ajax.onload = function(){
+
+        localStorage.clear();
+        location.reload();
+   };
+   ajax.send(JSON.stringify(obj));
+   
  
 }
 
 
 
-
-function orderTotal(){
-    var st = document.getElementById("subTotal").innerText;
-    var ship = document.getElementById("shipping").innerText;
-    var st1 = parseInt(st);
-    var ship1 = parseInt(ship);
-    var orderTotal = st1+ship1;
-    document.getElementById('orderTotal').innerHTML=orderTotal;   
-}
 
 
