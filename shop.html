@@ -223,13 +223,13 @@
 <a href="javascript:void(0);" class="search-open">
 <img src="img/search.png" alt="" />
 </a>
-<div class="search-inside animated bounceInUp"> <i class="icon-close search-close fa fa-times"></i>
+<div class="search-inside animated bounceInUp"> <i class="icon-close search-close fa fa-times" id="clickcloseButton"></i>
 <div class="search-overlay"></div>
 <div class="position-center-center">
 <div class="search">
 <form>
-<input type="search" id="searchItem" placeholder="Search Shop">
-<button onclick="search()" type="submit"><i class="fa fa-search"></i></button>
+<input type="search" id="searchItems" placeholder="Search Shop" value="">
+<button type="button" onclick="search()" ><i class="fa fa-search"></i></button>
 </form>
 </div>
 </div>
@@ -407,8 +407,8 @@
 
 <aside class="widget widget-categories">
 <h3 class="sidebar-title">Recent Product</h3>
-<div class="recent-product">
-<div class="single-product">
+<div class="recent-product" id="showrecentproduct">
+<!-- <div class="single-product">
 <div class="product-img">
 <a href="product-details.html">
 <img src="img/product/12.jpg" alt="" />
@@ -452,7 +452,7 @@
 <span class="old">$90.11</span>
 </div>
 </div>
-</div>
+</div> -->
 </div>
 </aside>
 

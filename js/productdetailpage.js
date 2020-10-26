@@ -1,5 +1,5 @@
 var productD;
-
+var productDetail;
 function getParams (url) {
     var params = {};
     var parser = document.createElement('a');
@@ -24,22 +24,29 @@ window.onload = function showProductDetails(){
 
     }
     ajax.onload = function(){
-        let productDetail = JSON.parse(this.response);
+        productDetail = JSON.parse(this.response);
         
+        let parameterUse = JSON.stringify(productDetail)
+        let productOtherImages = "";
+
+        let productReviews="";
         let countStars =0;
+        
         let totalReviews = productDetail.reviews.length;
+        console.log(productDetail.reviews)
         
         for(let i =0; i<=productDetail.reviews.length-1; i++){
         countStars = countStars+productDetail.reviews[i].stars;
+
         }
         let averageStars = Math.round(countStars/totalReviews);
 
         let displayAverageStars = "";
         for(let i=0; i<= averageStars-1; i++){
             displayAverageStars= displayAverageStars+`<i class="fa fa-star"></i>`
-            console.log(displayAverageStars)
+            
         }
-        debugger
+        
 
         if(averageStars==1){    
             displayAverageStars = displayAverageStars+ `<i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>`
@@ -56,7 +63,32 @@ window.onload = function showProductDetails(){
         else{
             displayAverageStars = displayAverageStars;
         }
-        
+
+        for(let i=0; i<= productDetail.reviews.length-1;i++){
+            productReviews = productReviews+`<li>
+            <div class="product-comments">
+            <img src="img/author.jpg" alt="" />
+            <div class="product-comments-content">
+            <p><strong>${productDetail.reviews[i].name}</strong> -
+            
+            <span class="pro-comments-rating">
+            ${productDetail.reviews[i].stars} stars
+            </span>
+            </p>
+            <div class="desc">
+            ${productDetail.reviews[i].comment}
+            </div>
+            </div>
+            </div>
+            </li>`
+        }
+
+        debugger
+        for(let i=0; i<=productDetail.product_other_images.length-1; i++){
+            productOtherImages = productOtherImages+`<ul class="single-product-tab" role="tablist">
+            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><img src="${productDetail.product_other_images[i]}"  alt="" /></a></li>
+            </ul>`
+        }
         
         
         productD =`<div class="row">
@@ -70,20 +102,14 @@ window.onload = function showProductDetails(){
         <div role="tabpanel" class="tab-pane" id="settings"><a href="#"><img class="zoom" src="${productDetail.img}" data-zoom-image="img/product/4.jpg" alt="" /></a></div>
         <div role="tabpanel" class="tab-pane" id="settingss"><a href="#"><img class="zoom" src="${productDetail.img}" data-zoom-image="img/product/4.jpg" alt="" /></a></div>
         </div>
-        
-        <ul class="single-product-tab" role="tablist">
-        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><img src="img/product/15.jpg" alt="" /></a></li>
-        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><img src="img/product/9.jpg" alt="" /></a></li>
-        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><img src="img/product/3.jpg" alt="" /></a></li>
-        <li role="presentation"><a href="#settingss" aria-controls="settings" role="tab" data-toggle="tab"><img src="img/product/4.jpg" alt="" /></a></li>
-        </ul>
+        ${productOtherImages}
         </div>
         </div>
         <div class="col-md-7 col-sm-7 col-xs-12 shop-list shop-details">
         <div class="product-content">
         <h3><a href="product-details.html">${productDetail.name}</a></h3>
         <div class="price">
-        <span>$${productDetail.price}</span>
+        <span>Rs ${productDetail.price}</span>
         <span class="old">$90.11</span>
         </div>
         <div class="s-p-rating">
@@ -167,60 +193,27 @@ window.onload = function showProductDetails(){
 <div role="tabpanel" class="tab-pane" id="page-comments">
  <div class="product-tab-desc">
 <div class="product-page-comments">
-<h2>1 review for Integer consequat ante lectus</h2>
+<h2>${totalReviews} Reviews from customers</h2>
 <ul>
-<li>
-<div class="product-comments">
-<img src="img/author.jpg" alt="" />
-<div class="product-comments-content">
-<p><strong>admin</strong> -
-<span>March 7, 2015:</span>
-<span class="pro-comments-rating">
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-</span>
-</p>
-<div class="desc">
-
-</div>
-</div>
-</div>
-</li>
+${productReviews}
 </ul>
 <div class="review-form-wrapper">
 <h3>Add a review</h3>
 <form action="#">
-<input type="text" placeholder="your name" />
-<input type="email" placeholder="your email" />
+<input type="text" id="reviewname" placeholder="your name" value=""/>
+<input type="email" id="email" placeholder="your email" value=""/>
 <div class="your-rating">
 <h5>Your Rating</h5>
-<span>
-<a href="#"><i class="fa fa-star"></i></a>
-<a href="#"><i class="fa fa-star"></i></a>
-</span>
-<span>
-<a href="#"><i class="fa fa-star"></i></a>
-<a href="#"><i class="fa fa-star"></i></a>
-<a href="#"><i class="fa fa-star"></i></a>
-</span>
-<span>
-<a href="#"><i class="fa fa-star"></i></a>
-<a href="#"><i class="fa fa-star"></i></a>
-<a href="#"><i class="fa fa-star"></i></a>
-<a href="#"><i class="fa fa-star"></i></a>
-</span>
-<span>
-<a href="#"><i class="fa fa-star"></i></a>
-<a href="#"><i class="fa fa-star"></i></a>
-<a href="#"><i class="fa fa-star"></i></a>
-<a href="#"><i class="fa fa-star"></i></a>
-<a href="#"><i class="fa fa-star"></i></a>
-</span>
+<select id="selectStars">
+<option>Select stars</option>
+<option value="2">2 stars</option>
+<option value="3">3 stars</option>
+<option value="4">4 stars</option>
+<option value="5">5 stars</option>
+</select>
 </div>
-<textarea id="product-message" cols="30" rows="10" placeholder="Your Rating"></textarea>
-<input type="submit" value="submit" />
+<textarea id="product-message" cols="30" rows="10" placeholder="Your Rating" value""></textarea>
+<button id="idx" type="button" onclick="submitReview()"/>submit
 </form>
 </div>
 </div>
@@ -236,8 +229,12 @@ window.onload = function showProductDetails(){
 
     }
     ajax.send();   
+    showRelatedProducts()
 }
 
+
+
+function showRelatedProducts(){
 let xhr = new XMLHttpRequest();
 let obj = this.getParams(window.location.href);
 console.log(obj.category);
@@ -248,19 +245,19 @@ xhr.onprogress = function(){
 }
 xhr.onload = function(){
     let relatedProduct = JSON.parse(this.response)
-    console.log(relatedProduct)
+    debugger
     let relatedProductsCards="";
     
     for(let i = 0; i<=relatedProduct.length-1; i++){
         relatedProductsCards = relatedProductsCards +`<div class="single-product">
          <div class="product-img">
-         <a href="product-details.html">
+         <a onclick="show('${relatedProduct[i].id}','${relatedProduct[i].parent_id}')">
          <img src="${relatedProduct[i].img}" alt="" />
-         <img class="secondary-img" src="img/product/18.jpg" alt="" />
+         <img class="secondary-img" src="${relatedProduct[i].product_other_images[0]}" alt="" />
          </a>
          </div>
          <div class="product-content">
-         <h3><a href="product-details.html" >${relatedProduct[i].name}</a></h3>
+         <h3><a onclick="show('${relatedProduct[i].id}','${relatedProduct[i].parent_id}')" >${relatedProduct[i].name}</a></h3>
          <div class="price">
          <span>$${relatedProduct[i].price}</span>
          <span class="old">$90.11</span>
@@ -272,3 +269,48 @@ xhr.onload = function(){
     document.getElementById('relatedproducts').innerHTML = relatedProductsCards;
 }
 xhr.send();
+}
+
+function submitReview(){
+    let data = productDetail
+    // let id = data;
+    // debugger
+    // var UpdateReview = {}
+    // UpdateReview.name = data.name
+    // UpdateReview.img = data.img
+    // UpdateReview.size = data.size
+    // UpdateReview.color = data.color
+    // UpdateReview.price = data.price
+    // UpdateReview.quantity = data.quantity
+    // UpdateReview.description = data.description
+    // UpdateReview.reviews = []
+    // UpdateReview.reviews = data.reviews
+    
+    // var name = document.getElementById('reviewname').value;
+   // var email = document.getElementById('email').value;
+   //  var comment = document.getElementById('product-message').value;
+    var seletectionOfStars = document.getElementById('selectStars');
+    var selectedValue = seletectionOfStars.options[seletectionOfStars.selectedIndex].value;
+   // UpdateReview.reviews.stars = selectedValue;
+    let newReview = {
+        name: document.getElementById('reviewname').value,
+        email:  document.getElementById('email').value,
+        comment: document.getElementById('product-message').value,
+        stars: parseInt(selectedValue)
+    }
+
+    data.reviews.push(newReview)
+    var request = JSON.stringify(data);
+    debugger;
+    let ajax = new XMLHttpRequest();
+    ajax.open("PUT", "http://localhost:3000/products/"+data.id)
+    ajax.setRequestHeader("content-type", "application/json")
+    ajax.onprogress = function(){
+
+    } 
+    ajax.onload = function(){
+        var items = this.response;
+        alert("Product is updated")
+    }
+    ajax.send(request);
+}
