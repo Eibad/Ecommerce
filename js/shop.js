@@ -103,7 +103,7 @@ function showProducts(){
         
         
         for(let i=0; i<=productList.length-1; i++){
-            
+            debugger;
             displayProducts=displayProducts +`<div class="col-md-4 col-sm-4">
             <div class="single-product">
             <div class="product-img">
