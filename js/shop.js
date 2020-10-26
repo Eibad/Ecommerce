@@ -22,6 +22,8 @@ window.onload = function viewCategory(){
             display=display +`<li><a onclick="viewSubCategory(${showCategory[i].id})">${showCategory[i].name}</a></li>`
             
         }
+
+        
         
         document.getElementById('category').innerHTML = display;
 
@@ -32,6 +34,7 @@ window.onload = function viewCategory(){
 
     let cart = getCartFromLocalStorage();
     document.getElementById('productCount').innerHTML = cart !=undefined ? cart.products.length : 0;
+    recentProducts();
 }
 
 function show(id,parent_id){
@@ -84,6 +87,7 @@ function showProducts(){
         let showProducts = JSON.parse(this.response)
 
         let productList = [];
+        
 
         for(let p of showProducts){
             
@@ -92,6 +96,7 @@ function showProducts(){
                 name:p.name,
                 price:p.price,
                 img:p.img,
+                product_other_images:p.product_other_images,
                 quantity:p.quantity,
                 parent_id:p.parent_id,
                 size:p.size,
@@ -106,50 +111,13 @@ function showProducts(){
         
         
         for(let i=0; i<=productList.length-1; i++){
-
-        let countStars = 0;
-        // debugger        
-        let totalReviews = productList[i].reviews.length;        
-        
-        
-        for(let i=0; i<=productList[i].reviews.length-1; i++){
-            
-            countStars = countStars + productList[i].reviews[i].stars;
-            // console.log(countStars)
-        
-        }
-
-        let averageStars = countStars == 0 && totalReviews == 0 ? 0 :  Math.round(countStars/totalReviews);
-        
-        let displayAverageStars = "";
-        for(let i=0; i<= averageStars-1; i++){
-            displayAverageStars= displayAverageStars+`<i class="fa fa-star"></i>`
-            
-        }
-      //  debugger
-
-        if(averageStars==1){    
-            displayAverageStars = displayAverageStars+ `<i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>`
-        }
-        else if(averageStars==2){
-            displayAverageStars = displayAverageStars+ `<i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>`
-        }
-        else if(averageStars==3){
-            displayAverageStars = displayAverageStars+ `<i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>`
-        }
-        else if(averageStars==4){
-            displayAverageStars = displayAverageStars+ `<i class="fa fa-star-o"></i>`
-        }
-        else{
-            displayAverageStars = displayAverageStars;
-        }
-
+           
             displayProducts=displayProducts +`<div class="col-md-4 col-sm-4">
             <div class="single-product">
             <div class="product-img">
-            <a href="product-details.html">
+            <a onclick="show('${productList[i].id}','${productList[i].parent_id}')" >
             <img style="width:262px; height:335px" src="${productList[i].img}" alt="" />
-            <img class="secondary-img" style="width:262px; height:335px" src="img/product/2.jpg" alt="" />
+            <img class="secondary-img" style="width:262px; height:335px" src="${productList[i].product_other_images[0]}" alt="" />
             </a>
             <span class="tag-line">new</span>
             <div class="product-action">
@@ -163,9 +131,6 @@ function showProducts(){
             </div>
             </div>
             <div class="product-content">
-            <div class="pro-rating">
-            ${displayAverageStars}
-            </div>
             <h3><a onclick="show('${productList[i].id}','${productList[i].parent_id}')">${productList[i].name}</a></h3>
             <div class="price">
             <span>Rs ${productList[i].price}</span>
@@ -204,6 +169,7 @@ function showProductsForPageTwo(){
                 name:p.name,
                 price:p.price,
                 img:p.img,
+                product_other_images:p.product_other_images,
                 quantity:p.quantity,
                 parent_id:p.parent_id,
                 size:p.size,
@@ -221,9 +187,9 @@ function showProductsForPageTwo(){
             displayProducts=displayProducts +`<div class="col-md-4 col-sm-4">
             <div class="single-product">
             <div class="product-img">
-            <a href="product-details.html">
+            <a onclick="show('${productList[i].id}','${productList[i].parent_id}')">
             <img style="width:262px; height:335px" src="${productList[i].img}" alt="" />
-            <img class="secondary-img" style="width:262px; height:335px" src="img/product/2.jpg" alt="" />
+            <img class="secondary-img" style="width:262px; height:335px" src="${productList[i].product_other_images[0]}" alt="" />
             </a>
             <span class="tag-line">new</span>
             <div class="product-action">
@@ -237,14 +203,7 @@ function showProductsForPageTwo(){
             </div>
             </div>
             <div class="product-content">
-            <div class="pro-rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-            </div>
-            <h3><a href="product-details.html">${productList[i].name}</a></h3>
+            <h3><a onclick="show('${productList[i].id}','${productList[i].parent_id}')">${productList[i].name}</a></h3>
             <div class="price">
             <span>Rs ${productList[i].price}</span>
             <span class="old">$80.11</span>
@@ -282,6 +241,7 @@ function showProductsForPageThree(){
                 name:p.name,
                 price:p.price,
                 img:p.img,
+                product_other_images:p.product_other_images,
                 quantity:p.quantity,
                 parent_id:p.parent_id,
                 size:p.size,
@@ -299,9 +259,9 @@ function showProductsForPageThree(){
             displayProducts=displayProducts +`<div class="col-md-4 col-sm-4">
             <div class="single-product">
             <div class="product-img">
-            <a href="product-details.html">
+            <a onclick="show('${productList[i].id}','${productList[i].parent_id}')">
             <img style="width:262px; height:335px" src="${productList[i].img}" alt="" />
-            <img class="secondary-img" style="width:262px; height:335px" src="img/product/2.jpg" alt="" />
+            <img class="secondary-img" style="width:262px; height:335px" src="${productList[i].product_other_images[0]}" alt="" />
             </a>
             <span class="tag-line">new</span>
             <div class="product-action">
@@ -315,14 +275,7 @@ function showProductsForPageThree(){
             </div>
             </div>
             <div class="product-content">
-            <div class="pro-rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-            </div>
-            <h3><a href="product-details.html">${productList[i].name}</a></h3>
+            <h3><a onclick="show('${productList[i].id}','${productList[i].parent_id}')">${productList[i].name}</a></h3>
             <div class="price">
             <span>Rs ${productList[i].price}</span>
             <span class="old">$80.11</span>
@@ -362,6 +315,7 @@ function showSelectedSubCategoryProducts(data){
                 name:p.name,
                 price:p.price,
                 img:p.img,
+                product_other_images:p.product_other_images,
                 quantity:p.quantity,
                 parent_id:p.parent_id,
                 size:p.size,
@@ -379,9 +333,9 @@ function showSelectedSubCategoryProducts(data){
             displaySubCategoryProducts=displaySubCategoryProducts +`<div class="col-md-4 col-sm-4">
             <div class="single-product">
             <div class="product-img">
-            <a href="product-details.html">
+            <a onclick="show('${productList[i].id}','${productList[i].parent_id}')">
             <img style="width:262px; height:335px" src="${productList[i].img}" alt="" />
-            <img class="secondary-img" style="width:262px; height:335px" src="img/product/2.jpg" alt="" />
+            <img class="secondary-img" style="width:262px; height:335px" src="${productList[i].product_other_images[0]}" alt="" />
             </a>
             <span class="tag-line">new</span>
             <div class="product-action">
@@ -395,14 +349,7 @@ function showSelectedSubCategoryProducts(data){
             </div>
             </div>
             <div class="product-content">
-            <div class="pro-rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-            </div>
-            <h3><a href="product-details.html">${productList[i].name}</a></h3>
+            <h3><a onclick="show('${productList[i].id}','${productList[i].parent_id}')">${productList[i].name}</a></h3>
             <div class="price">
             <span>Rs ${productList[i].price}</span>
             <span class="old">$80.11</span>
@@ -422,7 +369,7 @@ function showSelectedSubCategoryProducts(data){
 function search(){
     
     var searchedItems = "";
-    var searchItem = document.getElementById('searchItem').value;
+    var searchItem = document.getElementById('searchItems').value;
 
     let ajax = new XMLHttpRequest();
     ajax.open("GET", "http://localhost:3000/products?name_like="+searchItem)
@@ -444,6 +391,7 @@ function search(){
                 name:p.name,
                 price:p.price,
                 img:p.img,
+                product_other_images:p.product_other_images,
                 quantity:p.quantity,
                 parent_id:p.parent_id,
                 size:p.size,
@@ -457,12 +405,13 @@ function search(){
     }
 
         for (var i = 0; i <= productList.length - 1; i++) {
+            
                 searchedItems = searchedItems + `<div class="col-md-4 col-sm-4">
                 <div class="single-product">
                 <div class="product-img">
-                <a href="product-details.html">
+                <a onclick="show('${productList[i].id}','${productList[i].parent_id}')">
                 <img style="width:262px; height:335px" src="${productList[i].img}" alt="" />
-                <img class="secondary-img" style="width:262px; height:335px" src="img/product/2.jpg" alt="" />
+                <img class="secondary-img" style="width:262px; height:335px" src="${productList[i].product_other_images[0]}" alt="" />
                 </a>
                 <span class="tag-line">new</span>
                 <div class="product-action">
@@ -476,14 +425,7 @@ function search(){
                 </div>
                 </div>
                 <div class="product-content">
-                <div class="pro-rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-o"></i>
-                </div>
-                <h3><a href="product-details.html">${productList[i].name}</a></h3>
+                <h3><a onclick="show('${productList[i].id}','${productList[i].parent_id}')">${productList[i].name}</a></h3>
                 <div class="price">
                 <span>Rs ${productList[i].price}</span>
                 <span class="old">$80.11</span>
@@ -499,6 +441,8 @@ function search(){
     }
 
     ajax.send()
+    document.getElementById('clickcloseButton').click();
+    
 }
 
 function sort(){
@@ -535,6 +479,7 @@ function sort(){
                 name:p.name,
                 price:p.price,
                 img:p.img,
+                product_other_images:p.product_other_images,
                 quantity:p.quantity,
                 parent_id:p.parent_id,
                 size:p.size,
@@ -550,9 +495,9 @@ function sort(){
             sortedItems = sortedItems + `<div class="col-md-4 col-sm-4">
             <div class="single-product">
             <div class="product-img">
-            <a href="product-details.html">
+            <a onclick="show('${productList[i].id}','${productList[i].parent_id}')">
             <img style="width:262px; height:335px" src="${productList[i].img}" alt="" />
-            <img class="secondary-img" style="width:262px; height:335px" src="img/product/2.jpg" alt="" />
+            <img class="secondary-img" style="width:262px; height:335px" src="${productList[i].product_other_images[0]}" alt="" />
             </a>
             <span class="tag-line">new</span>
             <div class="product-action">
@@ -566,14 +511,7 @@ function sort(){
             </div>
             </div>
             <div class="product-content">
-            <div class="pro-rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-            </div>
-            <h3><a href="product-details.html">${productList[i].name}</a></h3>
+            <h3><a onclick="show('${productList[i].id}','${productList[i].parent_id}')">${productList[i].name}</a></h3>
             <div class="price">
             <span>Rs ${productList[i].price}</span>
             <span class="old">$80.11</span>
@@ -592,6 +530,66 @@ function sort(){
 
 }
 
+
+function recentProducts(){
+    let recentProductsDisplay="";
+    let ajax = new XMLHttpRequest();
+    ajax.open("GET","http://localhost:3000/products?_sort=id&_order=desc")
+    ajax.setRequestHeader("content-type", "application/json")
+    ajax.onprogress = function(){
+
+    }
+    ajax.onload = function(){
+        
+        let showProducts = JSON.parse(this.response)
+        
+        let productList = [];
+
+        for(let p of showProducts){
+            
+            let obj = {
+                id:p.id,
+                name:p.name,
+                price:p.price,
+                img:p.img,
+                product_other_images:p.product_other_images,
+                quantity:p.quantity,
+                parent_id:p.parent_id,
+                size:p.size,
+                color:p.color
+
+            }
+
+        productList.push(obj);
+
+
+    }
+
+        for(let i=0; i<=2; i++){
+            
+            recentProductsDisplay=recentProductsDisplay +`<div class="single-product">
+            <div class="product-img">
+            <a href="product-details.html" onclick="show('${productList[i].id}','${productList[i].parent_id}')">
+            <img src="${productList[i].img}" alt="" />
+            <img class="secondary-img" src="${productList[i].product_other_images[0]}" alt="" />
+            </a>
+            </div>
+            <div class="product-content">
+            <h3><a onclick="show('${productList[i].id}','${productList[i].parent_id}')">${productList[i].name}</a></h3>
+            <div class="price">
+            <span>Rs ${productList[i].price}</span>
+            <span class="old">$90.11</span>
+            </div>
+            </div>
+            </div>`
+            
+        }
+        
+        document.getElementById('showrecentproduct').innerHTML = recentProductsDisplay;
+
+        }
+    ajax.send();
+}
 
 
 
