@@ -1,4 +1,117 @@
 {
+  "order": [],
+  "cart": [
+    {
+      "amount": 292,
+      "products": [
+        {
+          "id": 1,
+          "name": "Black&nbspHoodie",
+          "price": 80,
+          "img": "https://static.pullandbear.net/2/photos//2020/V/0/2/p/5596/710/800/5596710800_2_6_8.jpg?t=1582547133537&imwidth=1125",
+          "quantity": 2,
+          "parent_id": 1,
+          "size": [
+            "small",
+            "medium",
+            "large"
+          ],
+          "color": "#aee0ae",
+          "reviews": [
+            {
+              "comment": "nice",
+              "stars": 2
+            },
+            {
+              "comment": "nice",
+              "stars": 2
+            },
+            {
+              "comment": "nice",
+              "stars": 6
+            },
+            {
+              "comment": "nice",
+              "stars": 2
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Blue&nbspHoodie",
+          "price": 78,
+          "img": "https://www.joma-sport.com/files/0001/jomabeta987543098359809538245098/web.system/assets/products/20171116165035.900696.722.jpg",
+          "quantity": 1,
+          "parent_id": 1,
+          "size": [
+            "small",
+            "medium",
+            "large"
+          ],
+          "color": "#aee0ae",
+          "reviews": [
+            {
+              "comment": "nice",
+              "stars": 3
+            },
+            {
+              "comment": "nice",
+              "stars": 1
+            },
+            {
+              "comment": "nice",
+              "stars": 2
+            },
+            {
+              "comment": "nice",
+              "stars": 1
+            },
+            {
+              "comment": "nice",
+              "stars": 1
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Funky&nbspT-shirt",
+          "price": 54,
+          "img": "https://www.joebrowns.co.uk/media/catalog/product/S/M/SM290A_1.jpg?width=600&height=720&quality=100&bg-color=255,255,255&fit=bounds",
+          "quantity": 1,
+          "parent_id": 2,
+          "size": [
+            "small",
+            "medium",
+            "large"
+          ],
+          "color": "#aee0ae",
+          "reviews": [
+            {
+              "comment": "nice",
+              "stars": 4
+            },
+            {
+              "comment": "nice",
+              "stars": 5
+            },
+            {
+              "comment": "nice",
+              "stars": 2
+            },
+            {
+              "comment": "nice",
+              "stars": 3
+            },
+            {
+              "comment": "nice",
+              "stars": 5
+            }
+          ]
+        }
+      ],
+      "id": 1
+    }
+  ],
   "category": [
     {
       "name": "Man",
@@ -1088,7 +1201,7 @@
     "theme": {
       "logo": "https://scontent.fkhi1-1.fna.fbcdn.net/v/t1.0-9/120301694_105373511335388_2960321652920930453_o.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=KZ6bxcQoj5gAX9iPn7Z&_nc_ht=scontent.fkhi1-1.fna&oh=4d6d2401a6f7c88ce591bfbdf0285bdd&oe=5FB26461",
       "homepage": "file:///D:/Stepway/Ecommerce/index.html",
-      "background_color": "#EFE2BA",
+      "background_color": "#bae790",
       "color": "#666",
       "font_size": "14px",
       "font_family": "poppins",
@@ -1096,16 +1209,16 @@
       "header_font_size": "14px",
       "header_color": "#000000",
       "header_hover": "#fe4847",
-      "header_cart_color": "#12b692",
-      "header_cart_dropdown_background": "#ffffff",
+      "header_cart_color": "red",
+      "header_cart_dropdown_background": "#fff",
       "header_cart_dropdown_color": "#000",
       "header_dropdown_background": "black",
       "header_dropdown_color": "#ffffff",
       "header_dropdown_hover": "#fe4847",
-      "banner_image": "url(https://fivmagazine.com/wp-content/uploads/2019/07/beitragsbild-foto-shooting-model-commercial-fashion.jpg)",
+      "banner_image": "url(https://www.bergerpaints.com/colour-magazine/Upload/Posting/Image/colours-fashion-bnr-apr17-2.jpg)",
       "banner_color": "black",
       "banner_font_size": "34px",
-      "btn_background": "orange",
+      "btn_background": "red",
       "btn_color": "#fff",
       "btn_hover": "#fff",
       "btn_hover_color": "#444",

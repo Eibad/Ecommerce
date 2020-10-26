@@ -1,6 +1,11 @@
 window.onload = function viewCategory(){
 
-    importTheme();
+    if(localStorage.getItem('theme')){
+        theme();
+    }else{
+        importTheme();
+    } 
+
     let display="";
     let ajax = new XMLHttpRequest();
     ajax.open("GET","http://localhost:3000/category")
@@ -26,6 +31,9 @@ window.onload = function viewCategory(){
     ajax.send();
 
     showProducts();
+
+    let cart = getCartFromLocalStorage();
+    document.getElementById('productCount').innerHTML = cart !=undefined ? cart.products.length : 0;
     recentProducts();
 }
 
@@ -103,7 +111,7 @@ function showProducts(){
         
         
         for(let i=0; i<=productList.length-1; i++){
-            debugger;
+           
             displayProducts=displayProducts +`<div class="col-md-4 col-sm-4">
             <div class="single-product">
             <div class="product-img">
@@ -584,25 +592,95 @@ function recentProducts(){
 }
 
 
-function addToCart(data){
 
-    let obj = JSON.parse(data);  
-    let ajax = new XMLHttpRequest();
+function addToCart(product){
+
+    let parsedProduct = JSON.parse(product);
     
-    ajax.open("POST", "http://localhost:3000/cartProduct")
-    ajax.setRequestHeader("content-type", "application/json")
-    ajax.onprogress = function () {
-        // console.log("the call is in pr")
-    }
-    ajax.onload = function () {
+   
+    debugger;
+
+    let cart = getCartFromLocalStorage();
+
+    if(cart != null){
+
+        let requestBody = processForCartDistinctProduct(parsedProduct);
+         
+        let ajax = new XMLHttpRequest();
+        ajax.open("PUT","http://localhost:3000/cart/"+requestBody.id);
+        ajax.setRequestHeader("content-type","application/json");
+        ajax.onprogress = function(){
+
+        };
+        ajax.onload = function(){
+
+            
         
-        alert("Product is added")
-        
+        }
+        ajax.send(JSON.stringify(requestBody));
+    }else{
+
+        let obj = {
+            "amount": parsedProduct.price,
+            "products":[parsedProduct]
+        }
+    
+
+        let ajax = new XMLHttpRequest();
+        ajax.open("POST","http://localhost:3000/cart");
+        ajax.setRequestHeader("content-type","application/json");
+        ajax.onprogress = function(){};
+        ajax.onload = function(){
+            
+            let cart = JSON.parse(this.response);
+            localStorage.setItem("cart",JSON.stringify(cart));
+
+            document.getElementById('productCount').innerHTML = cart !=undefined ? cart.products.length : 0;
+
+            
+        }
+     
+        ajax.send(JSON.stringify(obj));
+
     }
     
-    cartProduct = JSON.stringify(obj);
-    ajax.send(cartProduct)
+
+    function processForCartDistinctProduct(parsedProduct){
+        
+       let cart = getCartFromLocalStorage();
+       if(cart.products.find(el=> el.id == parsedProduct.id)){
+           let ind = cart.products.findIndex(el=> el.id == parsedProduct.id);
+           cart.products[ind].quantity++;
+           cart.amount += cart.products[ind].price;
+           localStorage.setItem('cart',JSON.stringify(cart));
+
+           return cart ;
+
+           debugger;
+
+       }else{
+
+        cart.products.push(parsedProduct);
+        cart.amount += parsedProduct.price;
+        localStorage.setItem("cart",JSON.stringify(cart));
+        document.getElementById('productCount').innerHTML = cart !=undefined ? cart.products.length : 0;
+        return cart;
+        debugger;
+        
+       }
+
+
+    }
+    
+
+
+
+
+   
+
 
 }
+
+
 
 
