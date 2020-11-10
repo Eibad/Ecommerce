@@ -1,11 +1,11 @@
-﻿<!doctype html>
+<!doctype html>
 <html class="no-js" lang="en">
 
 
 <head>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Shopping Cart</title>
+<title>Thank You</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="cdn-cgi/apps/head/VOTpVwma55eOauTrYZhS1mPXv0A.js"></script><link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
@@ -32,6 +32,7 @@
 
 <script src="js/settings.js"></script>
 <script src="js/localstorage.js"></script>
+<script src="js/thank_you.js"></script>
 
 
 
@@ -111,15 +112,15 @@
 <li><a href="about.html">about</a></li>
 <li><a href="blog.html">blog</a>
 <ul>
-<li><a href="blog.html">blog</a></li>
-<li><a href="single-blog.html">Blog Details</a></li>
+<li><a href="blog.html">blog left sidebar</a></li>
+<li><a href="single-blog-video.html">single blog video</a></li>
 </ul>
 </li>
 <li><a href="shop.html">shop</a>
 <div class="mega-menu mega-menu-2">
 <span>
 <a href="shop.html" class="mega-title">WOMEN CLOTH </a>
- <a href="shop.html">casual shirt</a>
+<a href="shop.html">casual shirt</a>
 <a href="shop.html">rikke t-shirt</a>
 <a href="shop.html">mia top </a>
 <a href="shop.html">muscle tee </a>
@@ -165,14 +166,14 @@
 </div>
 </div>
 <div class="col-md-2 col-sm-8 col-xs-6 header-right">
-<div  class="my-cart">
-<div class="total-cart">
+<div class="my-cart">
+<div  class="total-cart">
 <a onmouseover="headerCart()" href="cart.html">
 <img src="img/cart/icon-white.png" alt="" />
 <span id="productCount">0</span>
 </a>
 </div>
-<ul id="cartBox">
+<ul id="cartBox">   
 
 </ul>
 </div>
@@ -188,7 +189,7 @@
 <div class="search">
 <form>
 <input type="search" placeholder="Search Shop">
-<button type="submit"><i class="fa fa-search"></i></button>
+<button ><i class="fa fa-search"></i></button>
 </form>
 </div>
 </div>
@@ -280,8 +281,8 @@
 <div class="row">
 <div class="col-md-12">
 <div class="title-heading text-center">
-<h1>our SHOPPING CART</h1>
-<p>We are a featured brand that calls itself fashion</p>
+<h1>HAPPY SHOPPING</h1>
+<p></p>
 </div>
 </div>
 </div>
@@ -289,109 +290,29 @@
 </div>
 
 
-<div class="breadcrumb-area">
-<div class="container">
-<div class="row">
-<div class="col-md-12">
-<div class="breadcrumb-list">
-<ul>
-<li><a href="index.html">HOME</a></li>
-<li><a href="shop.html">Shop</a></li>
-<li><span>Shopping Cart</span></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
 
 
-<div class="cart-main-area">
-<div class="container">
-<div class="row">
-<div class="col-md-12 col-sm-12 col-xs-12">
-<form action="#">
-<div class="table-content table-responsive">
-<table>
-<thead>
-<tr>
-<th class="product-thumbnail">Image</th>
-<th class="product-name">Product</th>
-<th class="product-price">Price</th>
-<th class="product-quantity">Quantity</th>
-<th class="product-subtotal">Total</th>
-<th class="product-remove">Remove</th>
-</tr>
-</thead>
-<tbody id="cartItems">
-<!-- <tr>
-<td class="product-thumbnail"><a href="#"><img src="img/cart/2.jpg" alt="" /></a></td>
-<td class="product-name"><a href="#">Lorem ipsum dolor</a></td>
-<td class="product-price"><span class="amount">£125.00</span></td>
-<td class="product-quantity"><input type="number" value="1" /></td>
-<td class="product-subtotal">£125.00</td>
-<td class="product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
-</tr>
-<tr>
-<td class="product-thumbnail"><a href="#"><img src="img/cart/3.jpg" alt="" /></a></td>
-<td class="product-name"><a href="#">Lorem ipsum dolor</a></td>
-<td class="product-price"><span class="amount">£90.00</span></td>
-<td class="product-quantity"><input type="number" value="1" /></td>
-<td class="product-subtotal">£90.00</td>
-<td class="product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
-</tr> -->
-</tbody>
-</table>
-</div>
-<div class="row">
-<div class="col-md-8 col-sm-7 col-xs-12">
-<div class="buttons-cart">
-<input type="submit" value="Update Cart" />
-<a href="#">Continue Shopping</a>
-</div>
-<div class="coupon">
-<h3>Coupon</h3>
-<p>Enter your coupon code if you have one.</p>
-<input type="text" placeholder="Coupon code" />
-<input type="submit" value="Apply Coupon" />
-</div>
-</div>
-<div class="col-md-4 col-sm-5 col-xs-12">
-<div class="cart_totals">
-<h2>Cart Totals</h2>
-<table>
-<tbody id="total">
-<!-- <tr class="cart-subtotal">
-<th>Subtotal</th>
-<td><span class="amount">£215.00</span></td>
-</tr>
-<tr class="shipping">
-<th>Shipping</th>
-<td>
-<ul id="shipping_method">
-<li></li>
-</ul>
-<p><a class="shipping-calculator-button" href="#">Calculate Shipping</a></p>
-</td>
-</tr>
-<tr class="order-total">
-<th>Total</th>
-<td>
-<strong><span class="amount">£215.00</span></strong>
-</td>
-</tr> -->
-</tbody>
-</table>
-<div class="wc-proceed-to-checkout">
-<a href="checkout.html">Proceed to Checkout</a>
-</div>
-</div>
-</div>
-</div>
-</form>
-</div>
-</div>
-</div>
+<div class="about-area pad-60">
+    <div class="container">
+    <div class="row">
+    <div class="col-md-12">
+    <div class="section-title marg-50  text-center">
+    <h2>THANK YOU </h2>
+    <img src="img/section-title.png" alt="" />
+    </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-12 text-center">
+    <div class="about-text">
+    <p>Your Order Has been Successfully Placed</p>
+    <p>Your Order Tracking Id is <span style="font-weight: bolder;" id="track"></span></p>
+    </div>
+    </div>
+    </div>
+    
+    </div>
+
 </div>
 
 
@@ -403,9 +324,9 @@
 <div class="subscribe-us text-center">
 <h4>NEWSLETTER</h4>
 <span>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsumien lacus, eu posuere odi </span>
-<form action="#">
+<form >
 <input type="email" placeholder="Enter your email address">
-<button type="submit">SEND ME</button>
+<button >SEND ME</button>
 </form>
 </div>
 </div>
@@ -518,7 +439,7 @@
 
 <script src="js/bootstrap.min.js"></script>
 
- <script src="js/owl.carousel.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
 
 <script src="js/jquery.meanmenu.js"></script>
 
@@ -529,7 +450,6 @@
 <script src="js/plugins.js"></script>
 
 <script src="js/main.js"></script>
-<script src="js/productcart.js"></script>
 </body>
 
 

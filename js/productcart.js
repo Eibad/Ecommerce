@@ -30,9 +30,9 @@ function cartProducts(){
         <td class="product-thumbnail"><a href="#"><img src="${cart.products[i].img}" alt="" /></a></td>
         <td class="product-name"><a href="#">${cart.products[i].name}</a></td>
         <td class="product-price"><span class="amount">Rs ${cart.products[i].price}</span></td>
-        <td class="product-quantity">${cart.products[i].quantity}</td>
+        <td class="product-quantity"><input onchange=quantity('${JSON.stringify(cart.products[i])}') id="${cart.products[i].id}" min="1" type="number" value="${cart.products[i].quantity}" /></td>
         <td class="product-subtotal">Rs ${cart.products[i].price*cart.products[i].quantity}</td>
-        <td class="product-remove"><a onclick="deleteCartProduct(${cart.products[i].id})" href="#"><i class="fa fa-times"></i></a></td>
+        <td class="product-remove"><a onclick="deleteCartProductMain(${cart.products[i].id})" href="#"><i class="fa fa-times"></i></a></td>
         </tr>`
         ;
 
@@ -62,3 +62,103 @@ var c =`<tr class="cart-subtotal">
 }
 
 
+function deleteCartProductMain(productId){
+    
+    let cart = getCartFromLocalStorage();
+    let ind = cart.products.findIndex(el=> el.id == productId);
+    let quantity = cart.products[ind].quantity ;
+    for(let i=1;i<=quantity;i++)
+    {
+        cart.amount -= cart.products[ind].price;
+        cart.products[ind].stock++;
+    }
+
+    cart.products.splice(ind,1);
+    if(cart.products.length!=0){
+        localStorage.setItem('cart',JSON.stringify(cart));
+    }else{
+        cart.products = [];
+        localStorage.setItem('cart',JSON.stringify(cart));
+    }
+
+
+    
+    document.getElementById('productCount').innerHTML = cart !=undefined ? cart.products.length : 0;
+
+    let ajax = new XMLHttpRequest();
+            ajax.open("PUT","http://localhost:3000/cart/"+cart.id);
+            ajax.setRequestHeader("content-type","application/json");
+            ajax.onprogress = function(){};
+            ajax.onload = function(){
+                
+                cart = JSON.parse(this.response);
+                localStorage.setItem('cart',JSON.stringify(cart));
+
+            }
+            ajax.send(JSON.stringify(cart));
+
+    
+
+    
+    headerCart();
+    cartProducts();
+
+}
+
+
+function quantity(product) {
+    debugger;
+    let parsedProduct = JSON.parse(product);
+    var x = document.getElementById(parsedProduct.id).value;
+    
+
+    if (x > parsedProduct.quantity) {
+            let cart = getCartFromLocalStorage();
+            let ind = cart.products.findIndex(el=> el.id == parsedProduct.id)
+            cart.products[ind].quantity++;
+            cart.products[ind].stock--;
+            cart.amount += cart.products[ind].price;
+            localStorage.setItem('cart',JSON.stringify(cart));
+
+
+            let ajax = new XMLHttpRequest();
+            ajax.open("PUT","http://localhost:3000/cart/"+cart.id);
+            ajax.setRequestHeader("content-type","application/json");
+            ajax.onprogress = function(){};
+            ajax.onload = function(){
+                
+                cart = JSON.parse(this.response);
+                localStorage.setItem('cart',JSON.stringify(cart));
+
+            }
+            ajax.send(JSON.stringify(cart));
+
+            cartProducts();
+    } else if(x < parsedProduct.quantity) {
+        let cart = getCartFromLocalStorage();
+            let ind = cart.products.findIndex(el=> el.id == parsedProduct.id)
+            cart.products[ind].quantity--;
+            cart.products[ind].stock++;
+            cart.amount -= cart.products[ind].price;
+            localStorage.setItem('cart',JSON.stringify(cart));
+
+            let ajax = new XMLHttpRequest();
+            ajax.open("PUT","http://localhost:3000/cart/"+cart.id);
+            ajax.setRequestHeader("content-type","application/json");
+            ajax.onprogress = function(){};
+            ajax.onload = function(){
+                
+                cart = JSON.parse(this.response);
+                localStorage.setItem('cart',JSON.stringify(cart));
+
+            }
+            ajax.send(JSON.stringify(cart));
+
+            
+            cartProducts();
+      
+    }else{
+        cartProducts();
+        return;
+    }
+  }

@@ -35,6 +35,22 @@ window.onload = function showProductDetails(){
     }
     ajax.onload = function(){
         productDetail = JSON.parse(this.response);
+
+        
+        let obj = {
+            id:productDetail.id,
+            name:productDetail.name,
+            price:productDetail.price,
+            quantity:productDetail.quantity,
+            img:productDetail.img,
+            parent_id:productDetail.parent_id,
+            size:productDetail.size,
+            color:productDetail.color
+
+        }
+        console.log(obj);
+
+        debugger;
         
         let parameterUse = JSON.stringify(productDetail)
         let productOtherImages = "";
@@ -151,16 +167,11 @@ window.onload = function showProductDetails(){
         </select>
         </div>
         <div class="product-action">
-        <div class="cart-plus">
-        <form action="#">
-        <div class="cart-plus-minus"><input type="text" value="1" /></div>
-        </form>
-        </div>
         <div class="button-top">
         <a href="#"><i class="fa fa-heart"></i></a>
         </div>
         <div class="button-cart">
-        <button><i class="fa fa-shopping-cart"></i> add to cart</button>
+        <button type="button" onclick=addToCart('${JSON.stringify(obj)}')><i class="fa fa-shopping-cart"></i> add to cart</button>
         </div>
         </div>
         <div class="product-share">
@@ -239,7 +250,8 @@ ${productReviews}
 
     }
     ajax.send();   
-    showRelatedProducts()
+    showRelatedProducts();
+    headerCart();
 }
 
 

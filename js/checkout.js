@@ -49,8 +49,14 @@ function checkout(){
 
 
 
+
+
 function placeOrder(){
     debugger;
+
+    
+
+    let trackId = uuid();
 
     let cart = getCartFromLocalStorage();
     let settings = getSettingsFromLocalStorage();
@@ -63,6 +69,7 @@ function placeOrder(){
         orderAmount = orderAmount;
         orderStatus = "New";
         orderDate = new Date();
+        trackId = trackId;
 
 
 
@@ -97,8 +104,12 @@ function placeOrder(){
    ajax.onprogress = function(){};
    ajax.onload = function(){
 
-        localStorage.clear();
-        location.reload();
+        let orderDetails = JSON.parse(this.response);
+        // sms();
+        debugger
+        localStorage.setItem('trackId',JSON.stringify(orderDetails.trackId));
+        localStorage.removeItem('cart');
+        window.location.href = "thank_you.html";
    };
    ajax.send(JSON.stringify(obj));
    
@@ -106,6 +117,23 @@ function placeOrder(){
 }
 
 
+  
+  
+function uuid() {
+    return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+      (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+    );
 
+}
 
+function sms(){
+    let ajax = new XMLHttpRequest();
+    ajax.open("POST","https://sendpk.com/api/sms.php?username=923118966762&password=hdj12388&sender=ONS+COMPANY&mobile=923118966762&format=json&message=Assalam+o+Alikum");
+    ajax.setRequestHeader("content-type","application/json");
+    ajax.onprogress = function(){};
+    ajax.onload = function(){
+        console.log(this.response);
+    };
+    ajax.send();
+}
 

@@ -63,7 +63,7 @@ h6 {
 
 a {
 	text-decoration: none;
-	color: var(--header-color)
+	color: var(--header-color);
 }
 
 a,
@@ -71,6 +71,8 @@ button,
 input {
 	transition: all .3s ease 0s
 }
+
+
 
 a:hover {
 	color: #fe4847;
@@ -3571,7 +3573,7 @@ p.checkout-coupon input[type=submit] {
 .cart_totals h2 {
 	border-bottom: 2px solid #333;
 	display: inline-block;
-	font-size: 30px;
+	font-size: 32px;
 	margin: 0 0 35px;
 	text-transform: uppercase
 }
@@ -4803,6 +4805,27 @@ a#scrollUp:hover {
 
 .slider3{
 	background-image: var(--homepage-banner3);
+}
+
+.coupon button {
+	background: var(--btn-background) none repeat scroll 0 0;
+	border: medium;
+	color: var(--btn-color);
+	font-size: 15px;
+	font-weight: 600;
+	height: 40px;
+	margin: 0 0 0;
+	padding: 0;
+	text-transform: uppercase;
+	transition: all .3s ease 0s;
+	width: 25%
+}
+
+.coupon button:hover {
+	background: var(--btn-hover) none repeat scroll 0 0;
+	color: var(--btn-hover-color);
+	border: 1px solid var(--btn-hover-color);
+
 }
 
 :root{
