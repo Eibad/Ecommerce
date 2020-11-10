@@ -2,14 +2,20 @@
   "order": [],
   "cart": [
     {
-      "amount": 292,
+      "amount": 80,
       "products": [
         {
           "id": 1,
           "name": "Black&nbspHoodie",
           "price": 80,
           "img": "https://static.pullandbear.net/2/photos//2020/V/0/2/p/5596/710/800/5596710800_2_6_8.jpg?t=1582547133537&imwidth=1125",
-          "quantity": 2,
+          "product_other_images": [
+            "https://images-na.ssl-images-amazon.com/images/I/615HouMTBNL._AC_UL1375_.jpg",
+            "https://images-na.ssl-images-amazon.com/images/I/51dIoP7PTGL._AC_UX679_.jpg",
+            "https://www.pasnormalstudios.com/shared/16/615/pas-normal-studios-logo-hoodie-black_1180w.jpg"
+          ],
+          "quantity": 1,
+          "stock": 49,
           "parent_id": 1,
           "size": [
             "small",
@@ -19,91 +25,21 @@
           "color": "#aee0ae",
           "reviews": [
             {
-              "comment": "nice",
-              "stars": 2
-            },
-            {
-              "comment": "nice",
-              "stars": 2
-            },
-            {
-              "comment": "nice",
-              "stars": 6
-            },
-            {
-              "comment": "nice",
-              "stars": 2
-            }
-          ]
-        },
-        {
-          "id": 2,
-          "name": "Blue&nbspHoodie",
-          "price": 78,
-          "img": "https://www.joma-sport.com/files/0001/jomabeta987543098359809538245098/web.system/assets/products/20171116165035.900696.722.jpg",
-          "quantity": 1,
-          "parent_id": 1,
-          "size": [
-            "small",
-            "medium",
-            "large"
-          ],
-          "color": "#aee0ae",
-          "reviews": [
-            {
-              "comment": "nice",
-              "stars": 3
-            },
-            {
-              "comment": "nice",
-              "stars": 1
-            },
-            {
-              "comment": "nice",
-              "stars": 2
-            },
-            {
-              "comment": "nice",
-              "stars": 1
-            },
-            {
-              "comment": "nice",
-              "stars": 1
-            }
-          ]
-        },
-        {
-          "id": 3,
-          "name": "Funky&nbspT-shirt",
-          "price": 54,
-          "img": "https://www.joebrowns.co.uk/media/catalog/product/S/M/SM290A_1.jpg?width=600&height=720&quality=100&bg-color=255,255,255&fit=bounds",
-          "quantity": 1,
-          "parent_id": 2,
-          "size": [
-            "small",
-            "medium",
-            "large"
-          ],
-          "color": "#aee0ae",
-          "reviews": [
-            {
-              "comment": "nice",
+              "name": "Jamshad",
+              "email": "",
+              "comment": "Excellent!!!",
               "stars": 4
             },
             {
-              "comment": "nice",
+              "name": "Maria",
+              "email": "",
+              "comment": "Good",
               "stars": 5
             },
             {
-              "comment": "nice",
-              "stars": 2
-            },
-            {
-              "comment": "nice",
-              "stars": 3
-            },
-            {
-              "comment": "nice",
+              "name": "Moid",
+              "email": "",
+              "comment": "Nice",
               "stars": 5
             }
           ]
@@ -264,68 +200,27 @@
       "color": "#aee0ae",
       "price": 80,
       "quantity": 1,
+      "stock": 50,
       "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
       "parent_id": 1,
       "reviews": [
         {
-          "name": "Rameez",
-          "email": "nan@nan.com",
-          "comment": "nice",
-          "stars": 2,
-          "id": 1
+          "name": "Jamshad",
+          "email": "",
+          "comment": "Excellent!!!",
+          "stars": 4
         },
         {
-          "name": "Rameez",
-          "email": "nan@nan.com",
-          "comment": "nice",
-          "stars": 2,
-          "id": 2
-        },
-        {
-          "name": "Rameez",
-          "email": "nan@nan.com",
-          "comment": "nice",
-          "stars": 6,
-          "id": 3
-        },
-        {
-          "name": "Rameez",
-          "email": "nan@nan.com",
-          "comment": "nice",
-          "stars": 2,
-          "id": 4
-        },
-        {
-          "name": "Rameez",
-          "email": "nan@nan.com",
-          "comment": "nice",
-          "stars": 2,
-          "id": 5
-        },
-        {
-          "name": "shezy",
-          "email": "nan@nan.com",
-          "comment": "nice",
-          "stars": 2,
-          "id": 6
-        },
-        {
-          "name": "dasdas",
-          "email": "s@s.com",
-          "comment": "dadaw",
-          "stars": 2
-        },
-        {
-          "name": "sad",
-          "email": "sad@gmail.com",
-          "comment": "asd",
+          "name": "Maria",
+          "email": "",
+          "comment": "Good",
           "stars": 5
         },
         {
-          "name": "HiSaad",
-          "email": "saad@gmail.com",
-          "comment": "nice product love it!!",
-          "stars": 3
+          "name": "Moid",
+          "email": "",
+          "comment": "Nice",
+          "stars": 5
         }
       ]
     },
@@ -346,6 +241,7 @@
       "color": "#aee0ae",
       "price": 78,
       "quantity": 1,
+      "stock": 50,
       "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
       "parent_id": 1,
       "reviews": [
@@ -396,6 +292,7 @@
       "color": "#aee0ae",
       "price": 54,
       "quantity": 1,
+      "stock": 50,
       "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
       "parent_id": 2,
       "reviews": [
@@ -446,6 +343,7 @@
       "color": "#aee0ae",
       "price": 56,
       "quantity": 1,
+      "stock": 50,
       "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
       "parent_id": 2,
       "reviews": [
@@ -482,62 +380,6 @@
       ]
     },
     {
-      "name": "Confidently&nbspCool&nbspBlazer",
-      "id": 5,
-      "size": [
-        "small",
-        "medium",
-        "large"
-      ],
-      "img": "https://www.joebrowns.co.uk/media/catalog/product/J/A/JA486A_1.jpg?width=900&height=1080&quality=100&bg-color=255,255,255&fit=bounds",
-      "product_other_images": [
-        "https://www.joebrowns.co.uk/media/catalog/product/J/A/JA486A_2.jpg?width=900&height=1080&quality=100&bg-color=255,255,255&fit=bounds"
-      ],
-      "color": "#aee0ae",
-      "price": 100,
-      "quantity": 1,
-      "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
-      "parent_id": 3,
-      "reviews": [
-        {
-          "name": "Rameez",
-          "email": "nan@nan.com",
-          "comment": "nice",
-          "stars": 4
-        },
-        {
-          "name": "Rameez",
-          "email": "nan@nan.com",
-          "comment": "nice",
-          "stars": 3
-        },
-        {
-          "name": "Moazzam",
-          "email": "nan@nan.com",
-          "comment": "nice",
-          "stars": 1
-        },
-        {
-          "name": "Moiz",
-          "email": "nan@nan.com",
-          "comment": "nice",
-          "stars": 2
-        },
-        {
-          "name": "Haroon",
-          "email": "nan@nan.com",
-          "comment": "nice",
-          "stars": 3
-        },
-        {
-          "name": "Saad",
-          "email": "gmail@gmail.com",
-          "comment": "Nice coat!!",
-          "stars": 5
-        }
-      ]
-    },
-    {
       "name": "Confidently&nbspCool&nbspWaistcoat",
       "id": 6,
       "size": [
@@ -552,6 +394,7 @@
       "color": "#aee0ae",
       "price": 90,
       "quantity": 1,
+      "stock": 50,
       "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
       "parent_id": 3,
       "reviews": [
@@ -602,6 +445,7 @@
       "color": "#aee0ae",
       "price": 76,
       "quantity": 1,
+      "stock": 50,
       "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
       "parent_id": 4,
       "reviews": [
@@ -652,6 +496,7 @@
       "color": "#aee0ae",
       "price": 75,
       "quantity": 1,
+      "stock": 50,
       "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
       "parent_id": 4,
       "reviews": [
@@ -738,6 +583,7 @@
       "color": "#aee0ae",
       "price": 182,
       "quantity": 1,
+      "stock": 50,
       "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
       "parent_id": 5,
       "reviews": [
@@ -810,6 +656,7 @@
       "color": "#aee0ae",
       "price": 230,
       "quantity": 1,
+      "stock": 50,
       "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
       "parent_id": 6,
       "reviews": [
@@ -846,6 +693,7 @@
       "color": "#aee0ae",
       "price": 43,
       "quantity": 1,
+      "stock": 50,
       "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
       "parent_id": 7,
       "reviews": [
@@ -884,6 +732,7 @@
       "color": "#aee0ae",
       "price": 21,
       "quantity": 1,
+      "stock": 50,
       "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
       "parent_id": 7,
       "reviews": [
@@ -920,6 +769,7 @@
       "color": "#aee0ae",
       "price": 26,
       "quantity": 1,
+      "stock": 50,
       "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
       "parent_id": 8,
       "reviews": [
@@ -956,6 +806,7 @@
       "color": "#aee0ae",
       "price": 192,
       "quantity": 1,
+      "stock": 50,
       "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
       "parent_id": 8,
       "reviews": [
@@ -992,6 +843,7 @@
       "color": "#aee0ae",
       "price": 112,
       "quantity": 1,
+      "stock": 50,
       "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
       "parent_id": 9,
       "reviews": [
@@ -1028,6 +880,7 @@
       "color": "#aee0ae",
       "price": 142,
       "quantity": 1,
+      "stock": 50,
       "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
       "parent_id": 9,
       "reviews": [
@@ -1064,6 +917,7 @@
       "color": "#aee0ae",
       "price": 122,
       "quantity": 1,
+      "stock": 50,
       "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
       "parent_id": 10,
       "reviews": [
@@ -1100,6 +954,7 @@
       "color": "#aee0ae",
       "price": 122,
       "quantity": 1,
+      "stock": 50,
       "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
       "parent_id": 10,
       "reviews": [
@@ -1136,6 +991,7 @@
       "color": "#aee0ae",
       "price": 22,
       "quantity": 1,
+      "stock": 50,
       "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
       "parent_id": 11,
       "reviews": [
@@ -1172,6 +1028,7 @@
       "color": "#aee0ae",
       "price": 18,
       "quantity": 1,
+      "stock": 50,
       "description": "Lorem&nbspIpsum&nbspis&nbspsimply&nbspdummy&nbsptext&nbspof&nbspthe&nbspprinting&nbspand&nbsptypesetting&nbspindustry.&nbspLorem&nbspIpsum&nbsphas&nbspbeen&nbspthe&nbspindustry's&nbspstandard&nbspdummy&nbsptext&nbspever&nbspsince&nbspthe&nbsp1500s,&nbspwhen&nbspan&nbspunknown&nbspprinter&nbsptook&nbspa&nbspgalley&nbspof&nbsptype&nbspand&nbspscrambled&nbspit&nbspto&nbspmake&nbspa&nbsptype&nbspspecimen&nbspbook.&nbspIt&nbsphas&nbspsurvived&nbspnot&nbsponly&nbspfive&nbspcenturies,&nbspbut&nbspalso&nbspthe&nbspleap&nbspinto&nbspelectronic&nbsptypesetting,&nbspremaining&nbspessentially&nbspunchanged.&nbspIt&nbspwas&nbsppopularised&nbspin&nbspthe&nbsp1960s&nbspwith&nbspthe&nbsprelease&nbspof&nbspLetraset&nbspsheets&nbspcontaining&nbspLorem&nbspIpsum&nbsppassages,&nbspand&nbspmore&nbsprecently&nbspwith&nbspdesktop&nbsppublishing&nbspsoftware&nbsplike&nbspAldus&nbspPageMaker&nbspincluding&nbspversions&nbspof&nbspLorem&nbspIpsum.",
       "parent_id": 11,
       "reviews": [
@@ -1205,20 +1062,20 @@
       "color": "#666",
       "font_size": "14px",
       "font_family": "poppins",
-      "header_background": "#ffffff",
+      "header_background": "#000",
       "header_font_size": "14px",
-      "header_color": "#000000",
+      "header_color": "#fff",
       "header_hover": "#fe4847",
-      "header_cart_color": "red",
-      "header_cart_dropdown_background": "#fff",
-      "header_cart_dropdown_color": "#000",
+      "header_cart_color": "green",
+      "header_cart_dropdown_background": "#000",
+      "header_cart_dropdown_color": "#fff",
       "header_dropdown_background": "black",
       "header_dropdown_color": "#ffffff",
       "header_dropdown_hover": "#fe4847",
       "banner_image": "url(https://www.bergerpaints.com/colour-magazine/Upload/Posting/Image/colours-fashion-bnr-apr17-2.jpg)",
       "banner_color": "black",
       "banner_font_size": "34px",
-      "btn_background": "red",
+      "btn_background": "green",
       "btn_color": "#fff",
       "btn_hover": "#fff",
       "btn_hover_color": "#444",

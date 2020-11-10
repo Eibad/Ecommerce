@@ -68,6 +68,7 @@ function deleteCartProduct(productId){
     for(let i=1;i<=quantity;i++)
     {
         cart.amount -= cart.products[ind].price;
+        cart.products[ind].stock++;
     }
 
     cart.products.splice(ind,1);
@@ -81,10 +82,21 @@ function deleteCartProduct(productId){
 
     
     document.getElementById('productCount').innerHTML = cart !=undefined ? cart.products.length : 0;
+
+    let ajax = new XMLHttpRequest();
+            ajax.open("PUT","http://localhost:3000/cart/"+cart.id);
+            ajax.setRequestHeader("content-type","application/json");
+            ajax.onprogress = function(){};
+            ajax.onload = function(){
+                
+                cart = JSON.parse(this.response);
+                localStorage.setItem('cart',JSON.stringify(cart));
+
+            }
+            ajax.send(JSON.stringify(cart));
     
 
     
     headerCart();
-    location.reload();
 
 }

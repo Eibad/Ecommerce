@@ -98,6 +98,7 @@ function showProducts(){
                 img:p.img,
                 product_other_images:p.product_other_images,
                 quantity:p.quantity,
+                stock:p.stock,
                 parent_id:p.parent_id,
                 size:p.size,
                 color:p.color,
@@ -144,6 +145,8 @@ function showProducts(){
         
         document.getElementById('products').innerHTML = displayProducts;
 
+        
+
         }
     ajax.send();
 }
@@ -171,6 +174,7 @@ function showProductsForPageTwo(){
                 img:p.img,
                 product_other_images:p.product_other_images,
                 quantity:p.quantity,
+                stock:p.stock,
                 parent_id:p.parent_id,
                 size:p.size,
                 color:p.color
@@ -215,6 +219,7 @@ function showProductsForPageTwo(){
         }
         
         document.getElementById('products').innerHTML = displayProducts;
+        
 
         }
     ajax.send();
@@ -243,6 +248,7 @@ function showProductsForPageThree(){
                 img:p.img,
                 product_other_images:p.product_other_images,
                 quantity:p.quantity,
+                stock:p.stock,
                 parent_id:p.parent_id,
                 size:p.size,
                 color:p.color
@@ -317,6 +323,7 @@ function showSelectedSubCategoryProducts(data){
                 img:p.img,
                 product_other_images:p.product_other_images,
                 quantity:p.quantity,
+                stock:p.stock,
                 parent_id:p.parent_id,
                 size:p.size,
                 color:p.color
@@ -393,6 +400,7 @@ function search(){
                 img:p.img,
                 product_other_images:p.product_other_images,
                 quantity:p.quantity,
+                stock:p.stock,
                 parent_id:p.parent_id,
                 size:p.size,
                 color:p.color
@@ -481,6 +489,7 @@ function sort(){
                 img:p.img,
                 product_other_images:p.product_other_images,
                 quantity:p.quantity,
+                stock:p.stock,
                 parent_id:p.parent_id,
                 size:p.size,
                 color:p.color
@@ -554,6 +563,7 @@ function recentProducts(){
                 img:p.img,
                 product_other_images:p.product_other_images,
                 quantity:p.quantity,
+                stock:p.stock,
                 parent_id:p.parent_id,
                 size:p.size,
                 color:p.color
@@ -596,9 +606,6 @@ function recentProducts(){
 function addToCart(product){
 
     let parsedProduct = JSON.parse(product);
-    
-   
-    debugger;
 
     let cart = getCartFromLocalStorage();
 
@@ -618,68 +625,71 @@ function addToCart(product){
         
         }
         ajax.send(JSON.stringify(requestBody));
-    }else{
+    }else{  
 
-        let obj = {
-            "amount": parsedProduct.price,
-            "products":[parsedProduct]
-        }
-    
+            parsedProduct.stock--;
 
-        let ajax = new XMLHttpRequest();
-        ajax.open("POST","http://localhost:3000/cart");
-        ajax.setRequestHeader("content-type","application/json");
-        ajax.onprogress = function(){};
-        ajax.onload = function(){
+            let obj = {
+                "amount": parsedProduct.price,
+                "products":[parsedProduct]
+            }
             
-            let cart = JSON.parse(this.response);
-            localStorage.setItem("cart",JSON.stringify(cart));
+    
+            let ajax = new XMLHttpRequest();
+            ajax.open("POST","http://localhost:3000/cart");
+            ajax.setRequestHeader("content-type","application/json");
+            ajax.onprogress = function(){};
+            ajax.onload = function(){
+                
+                let cart = JSON.parse(this.response);
 
-            document.getElementById('productCount').innerHTML = cart !=undefined ? cart.products.length : 0;
 
+                localStorage.setItem("cart",JSON.stringify(cart));
+    
+                document.getElementById('productCount').innerHTML = cart !=undefined ? cart.products.length : 0;
+    
+                
+            }
+         
+            ajax.send(JSON.stringify(obj));
             
         }
-     
-        ajax.send(JSON.stringify(obj));
 
-    }
     
-
-    function processForCartDistinctProduct(parsedProduct){
-        
-       let cart = getCartFromLocalStorage();
-       if(cart.products.find(el=> el.id == parsedProduct.id)){
-           let ind = cart.products.findIndex(el=> el.id == parsedProduct.id);
-           cart.products[ind].quantity++;
-           cart.amount += cart.products[ind].price;
-           localStorage.setItem('cart',JSON.stringify(cart));
-
-           return cart ;
-
-           debugger;
-
-       }else{
-
-        cart.products.push(parsedProduct);
-        cart.amount += parsedProduct.price;
-        localStorage.setItem("cart",JSON.stringify(cart));
-        document.getElementById('productCount').innerHTML = cart !=undefined ? cart.products.length : 0;
-        return cart;
-        debugger;
-        
-       }
-
-
-    }
-    
-
-
-
-
-   
-
 
 }
+
+
+
+function processForCartDistinctProduct(parsedProduct){
+        
+    let cart = getCartFromLocalStorage();
+    if(cart.products.find(el=> el.id == parsedProduct.id)){
+        let ind = cart.products.findIndex(el=> el.id == parsedProduct.id);
+        cart.products[ind].quantity++;
+        cart.products[ind].stock--;
+        cart.amount += cart.products[ind].price;
+        localStorage.setItem('cart',JSON.stringify(cart));
+
+        return cart ;
+
+        debugger;
+
+    }else{
+
+     parsedProduct.stock--;   
+     cart.products.push(parsedProduct);
+     cart.amount += parsedProduct.price;
+     
+     localStorage.setItem("cart",JSON.stringify(cart));
+     document.getElementById('productCount').innerHTML = cart !=undefined ? cart.products.length : 0;
+     return cart;
+     debugger;
+     
+    }
+
+
+ }
 
 
 
